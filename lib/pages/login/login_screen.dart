@@ -31,8 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: 10,
                     ),
                     TextFormField(
-                      decoration: const InputDecoration(
-                          hintText: "E-mail"),
+                      decoration: const InputDecoration(hintText: "E-mail"),
                     ),
                     const SizedBox(
                       height: 10,
@@ -45,8 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     TextFormField(
                       obscureText: true,
-                      decoration: const InputDecoration(
-                          hintText: "Password"),
+                      decoration: const InputDecoration(hintText: "Password"),
                     ),
                     const SizedBox(
                       height: 10,
@@ -54,8 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     TextButton(
                       onPressed: () => {},
                       style: TextButton.styleFrom(
-                        foregroundColor: const Color.fromARGB(
-                            255, 250, 74, 12),
+                        foregroundColor: const Color.fromARGB(255, 250, 74, 12),
                       ),
                       child: const Text("Forgot passcode?"),
                     ),
@@ -70,11 +67,10 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: 50,
                           child: TextButton(
                             style: TextButton.styleFrom(
-                              backgroundColor: const Color.fromARGB(
-                                  255, 250, 74, 12),
+                              backgroundColor:
+                                  const Color.fromARGB(255, 250, 74, 12),
                               shape: RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.circular(20),
+                                borderRadius: BorderRadius.circular(20),
                               ),
                             ),
                             onPressed: () {},

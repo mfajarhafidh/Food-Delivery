@@ -33,7 +33,8 @@ class TabSlide extends StatelessWidget {
                               bottomRight: Radius.circular(30),
                             )),
                         child: TabBar(
-                          indicatorColor: const Color.fromARGB(255, 250, 74, 12),
+                          indicatorColor:
+                              const Color.fromARGB(255, 250, 74, 12),
                           indicator: UnderlineTabIndicator(
                               borderSide: const BorderSide(
                                   color: Color.fromARGB(255, 250, 74, 12)),
