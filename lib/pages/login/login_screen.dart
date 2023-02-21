@@ -31,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             color: Colors.black26)),
                     TextFormField(
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                          const TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                       decoration: const InputDecoration(
                         hintText: "E-mail",
                       ),
@@ -47,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     TextFormField(
                       obscureText: true,
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                          const TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                       decoration: const InputDecoration(hintText: "Password"),
                     ),
                     const SizedBox(

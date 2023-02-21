@@ -46,10 +46,10 @@ class TabSlide extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Container(
+                      const SizedBox(
                           height: 500,
                           width: double.infinity,
-                          child: const TabBarView(children: <Widget>[
+                          child: TabBarView(children: <Widget>[
                             LoginScreen(),
                             SignUpScreen()
                           ]))
