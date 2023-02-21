@@ -15,7 +15,6 @@ class _LoginScreenState extends State<LoginScreen> {
         resizeToAvoidBottomInset: false,
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         body: ListView(
-          // padding: const EdgeInsets.fromLTRB(0, 400, 0, 0),
           shrinkWrap: true,
           reverse: true,
           children: [
@@ -79,32 +78,36 @@ class _LoginScreenState extends State<LoginScreen> {
                                     ),
                                     child: const Text("Forgot passcode?"),
                                   ),
-
                                   const SizedBox(
                                     height: 200,
                                   ),
-
-                                  Container(
-                                    margin: const EdgeInsets.only(left: 50, right: 50),
-                                    width: 200,
-                                    height: 45,
-                                    child: TextButton(
-                                      style: TextButton.styleFrom(
-                                        backgroundColor: const Color.fromARGB(
-                                            255, 250, 74, 12),
-                                        shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Container(
+                                        margin: const EdgeInsets.only(
+                                            left: 50, right: 50),
+                                        width: 200,
+                                        height: 45,
+                                        child: TextButton(
+                                          style: TextButton.styleFrom(
+                                            backgroundColor: const Color.fromARGB(
+                                                255, 250, 74, 12),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(20),
+                                            ),
+                                          ),
+                                          onPressed: () {},
+                                          child: const Text(
+                                            "Login",
+                                            style: TextStyle(
+                                              color: Color(0xffffffff),
+                                            ),
+                                          ),
                                         ),
                                       ),
-                                      onPressed: () {},
-                                      child: const Text(
-                                        "Login",
-                                        style: TextStyle(
-                                          color: Color(0xffffffff),
-                                        ),
-                                      ),
-                                    ),
+                                    ],
                                   ),
                                 ],
                               ),
@@ -113,14 +116,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ),
-                    // Transform.translate(
-                    //   offset: const Offset(0, -253),
-                    //   child: Image.asset(
-                    //     'assets/img/login_page.png',
-                    //     scale: 1.5,
-                    //     width: double.infinity,
-                    //   ),
-                    // ),
                   ],
                 )
               ],

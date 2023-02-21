@@ -12,12 +12,18 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        // home: LoginScreen(),
         debugShowCheckedModeBanner: false,
         home: DefaultTabController(
             length: 2,
             child: Scaffold(
               appBar: AppBar(
+                backgroundColor: Colors.orange,
+                shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(25.0),
+                  bottomRight: Radius.circular(25.0)
+                )
+              ),
                 bottom: const TabBar(
                   indicatorColor: Color.fromARGB(255, 250, 74, 12),
                   tabs: [Tab(text: "Login"), Tab(text: "Sign-up")],
