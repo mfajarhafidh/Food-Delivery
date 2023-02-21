@@ -20,3 +20,8 @@ flutter:
   assets:
     - assets/
     - assets/img/
+
+  fonts:
+    - family: SF-Pro
+      fonts :
+        - asset: assets/fonts/SF-Pro-Rounded-Regular.ttf

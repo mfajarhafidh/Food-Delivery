@@ -32,18 +32,17 @@ class TabSlide extends StatelessWidget {
                               bottomLeft: Radius.circular(30),
                               bottomRight: Radius.circular(30),
                             )),
-                        child: TabBar(
-                          indicatorColor:
-                              const Color.fromARGB(255, 250, 74, 12),
-                          indicator: UnderlineTabIndicator(
-                              borderSide: const BorderSide(
-                                  color: Color.fromARGB(255, 250, 74, 12)),
-                              borderRadius: BorderRadius.circular(25)),
+                        child: const TabBar(
+                          labelStyle: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 18),
+                          indicatorColor: Color.fromARGB(255, 250, 74, 12),
+                          indicatorPadding:
+                              EdgeInsets.symmetric(horizontal: 50),
                           labelColor: Colors.black,
                           unselectedLabelColor: Colors.black,
                           tabs: [
-                            const Tab(text: 'Login'),
-                            const Tab(text: 'Sign-up'),
+                            Tab(text: 'Login'),
+                            Tab(text: 'Sign-up'),
                           ],
                         ),
                       ),

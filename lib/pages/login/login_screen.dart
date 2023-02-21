@@ -24,26 +24,30 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      "Email address",
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
+                    const Text("Email address",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                            color: Colors.black26)),
                     TextFormField(
-                      decoration: const InputDecoration(hintText: "E-mail"),
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                      decoration: const InputDecoration(
+                        hintText: "E-mail",
+                      ),
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 30,
                     ),
-                    const Text(
-                      "Password",
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
+                    const Text("Password",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                            color: Colors.black26)),
                     TextFormField(
                       obscureText: true,
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
                       decoration: const InputDecoration(hintText: "Password"),
                     ),
                     const SizedBox(
@@ -54,7 +58,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: TextButton.styleFrom(
                         foregroundColor: const Color.fromARGB(255, 250, 74, 12),
                       ),
-                      child: const Text("Forgot passcode?"),
+                      child: const Text("Forgot passcode?",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 17)),
                     ),
                     const SizedBox(
                       height: 50,
@@ -77,8 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             child: const Text(
                               "Login",
                               style: TextStyle(
-                                color: Color(0xffffffff),
-                              ),
+                                  color: Color(0xffffffff), fontSize: 17),
                             ),
                           ),
                         ),
