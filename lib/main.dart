@@ -1,4 +1,5 @@
 import 'package:assigment_isi/pages/history/history_screen.dart';
+import 'package:assigment_isi/pages/item_not_found/item_not_found_screen.dart';
 import 'package:assigment_isi/pages/offers/no_offer_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +18,6 @@ class MainApp extends StatelessWidget {
           fontFamily: 'SF-Pro',
         ),
         // home: const TabSlide());
-        home: const NoOfferScreen());
+        home: const ItemNotFoundScreen());
   }
 }
