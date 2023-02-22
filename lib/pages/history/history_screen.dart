@@ -25,7 +25,7 @@ class HistoryScreen extends StatelessWidget {
                     width: 300,
                     child: Text(
                         textAlign: TextAlign.center,
-                        "Orders",
+                        "History",
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold),
                       )
