@@ -13,7 +13,7 @@
 ![image](https://user-images.githubusercontent.com/94110628/220521710-85224cfa-fa89-48c0-820f-4a7f5a8a1cb4.png)
 
 ## Item Not Found
-![image](https://user-images.githubusercontent.com/94110628/220521779-424b9e08-8a0e-4365-87d5-19816f44ac2e.png)
+![image](https://user-images.githubusercontent.com/94110628/220547916-99ac0faf-7df5-48b3-9690-00fb9b09fdf3.png)
 
 ## No Internet Connection
 ![image](https://user-images.githubusercontent.com/94110628/220521849-b68b9053-0585-4fd5-913c-5c82067f3716.png)
