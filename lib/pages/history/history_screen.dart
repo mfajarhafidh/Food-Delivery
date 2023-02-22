@@ -23,7 +23,7 @@ class HistoryScreen extends StatelessWidget {
                   Container(
                     height: 30,
                     width: 300,
-                    child: Text(
+                    child: const Text(
                         textAlign: TextAlign.center,
                         "History",
                         style: TextStyle(
@@ -41,7 +41,7 @@ class HistoryScreen extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  Text(
+                  const Text(
                     "No History Yet",
                     style: 
                     TextStyle(color: Colors.black, fontSize: 28, fontWeight: FontWeight.bold),
@@ -49,14 +49,14 @@ class HistoryScreen extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  Text("Hit the orange button down",
+                  const Text("Hit the orange button down",
                       style: TextStyle(fontSize: 18, color: Colors.black26)),
-                  Text("below to Create an order",
+                  const Text("below to Create an order",
                       style: TextStyle(fontSize: 18, color: Colors.black26)),
                   const SizedBox(
                     height: 200,
                   ),
-                  ButtonWidget(textTitle: "Start Ordering")
+                  const ButtonWidget(textTitle: "Start Ordering")
                 ],
               )
             ],

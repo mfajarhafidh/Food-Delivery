@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/button_widget.dart';
-
-class NoInternetConnectionScreen extends StatelessWidget {
-  const NoInternetConnectionScreen({super.key});
+class NoOfferScreen extends StatelessWidget {
+  const NoOfferScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,35 +13,40 @@ class NoInternetConnectionScreen extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           child: ListView(
             children: [
+              IconButton(
+                  alignment: Alignment.topLeft,
+                  padding: EdgeInsets.only(left: 30, top: 40),
+                  onPressed: () {},
+                  icon: Image.asset('assets/img/btn_back.png')),
+              const SizedBox(
+                height: 40,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text(
+                  "My Offers",
+                  style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                ),
+              ),
               Column(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const SizedBox(
-                    height: 175,
-                  ),
-                  Image.asset('assets/img/no_internet.png',
-                      color: Colors.black12),
-                  const SizedBox(
-                    height: 20,
+                    height: 200,
                   ),
                   const Text(
-                    "No Internet Connection",
+                    "Oh Snap! No Offers Yet",
                     style: TextStyle(
                         color: Colors.black,
-                        fontSize: 28,
+                        fontSize: 34,
                         fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(
                     height: 20,
                   ),
-                  const Text("Your internet connection is currently",
+                  const Text("Bella doesn't have any offers",
                       style: TextStyle(fontSize: 18, color: Colors.black26)),
-                  const Text("not available please check or try again.",
+                  const Text("yet please check again.",
                       style: TextStyle(fontSize: 18, color: Colors.black26)),
-                  const SizedBox(
-                    height: 50,
-                  ),
-                  const ButtonWidget(textTitle: "Try Again")
                 ],
               )
             ],

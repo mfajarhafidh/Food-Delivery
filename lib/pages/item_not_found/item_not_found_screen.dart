@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/button_widget.dart';
-
 class ItemNotFoundScreen extends StatelessWidget {
   const ItemNotFoundScreen({super.key});
 
@@ -26,8 +24,8 @@ class ItemNotFoundScreen extends StatelessWidget {
                     width: 300,
                     child: TextFormField(
                       style:
-                          TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
-                      decoration: InputDecoration(border: InputBorder.none),
+                          const TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                      decoration: const InputDecoration(border: InputBorder.none),
                     ),
                   )
                 ],
@@ -41,7 +39,7 @@ class ItemNotFoundScreen extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  Text(
+                  const Text(
                     "Item Not Found",
                     style: 
                     TextStyle(color: Colors.black, fontSize: 28, fontWeight: FontWeight.bold),
@@ -49,9 +47,9 @@ class ItemNotFoundScreen extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  Text("Try searching the item with",
+                  const Text("Try searching the item with",
                       style: TextStyle(fontSize: 18, color: Colors.black26)),
-                  Text("a different keyword.",
+                  const Text("a different keyword.",
                       style: TextStyle(fontSize: 18, color: Colors.black26)),
                 ],
               )
