@@ -1,6 +1,7 @@
 import 'package:assigment_isi/pages/history/history_screen.dart';
 import 'package:assigment_isi/pages/item_not_found/item_not_found_screen.dart';
 import 'package:assigment_isi/pages/offers/no_offer_screen.dart';
+import 'package:assigment_isi/pages/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,6 +18,6 @@ class MainApp extends StatelessWidget {
         theme: ThemeData(
           fontFamily: 'SF-Pro',
         ),
-        home: const HistoryScreen());
+        home: const ProfileScreen());
   }
 }
