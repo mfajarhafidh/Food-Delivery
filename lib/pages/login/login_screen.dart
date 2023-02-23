@@ -14,7 +14,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-        backgroundColor: const Color.fromARGB(239, 209, 209, 209),
+        backgroundColor: const Color(0xFFF5F5F8),
         body: ListView(
           children: [
             SizedBox(

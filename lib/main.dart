@@ -17,7 +17,6 @@ class MainApp extends StatelessWidget {
         theme: ThemeData(
           fontFamily: 'SF-Pro',
         ),
-        // home: const TabSlide());
-        home: const ItemNotFoundScreen());
+        home: const HistoryScreen());
   }
 }

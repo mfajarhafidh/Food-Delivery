@@ -8,7 +8,7 @@ class ItemNotFoundScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-        backgroundColor: const Color.fromARGB(239, 209, 209, 209),
+        backgroundColor: const Color(0xFFF5F5F8),
         body: Padding(
           padding: const EdgeInsets.all(20),
           child: ListView(
