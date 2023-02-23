@@ -20,6 +20,7 @@ flutter:
   assets:
     - assets/
     - assets/img/
+    - assets/icon/
 
   fonts:
     - family: SF-Pro

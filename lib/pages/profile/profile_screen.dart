@@ -1,7 +1,6 @@
 import 'package:assigment_isi/widgets/button_widget.dart';
+import 'package:assigment_isi/widgets/fonts_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -13,7 +12,7 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
 
   Widget spacingBoxSized(){
-    return SizedBox(
+    return const SizedBox(
       height: 20,
     );
   }
@@ -33,12 +32,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
               children: [
                 IconButton(
                     alignment: Alignment.topLeft,
-                    padding: EdgeInsets.only(left: 30, top: 40),
+                    padding: const EdgeInsets.only(left: 30, top: 20),
                     onPressed: () {},
-                    icon: Icon(Icons.arrow_back_ios)),
+                    icon: const Icon(Icons.arrow_back_ios)),
                 const SizedBox(height: 30),
-                Padding(
-                  padding: const EdgeInsets.only(left: 20),
+                const Padding(
+                  padding: EdgeInsets.only(left: 20),
                   child: Text(
                     "My Profile",
                     style: TextStyle(fontSize: 32, fontWeight: FontWeight.w600),
@@ -53,25 +52,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     children: [
                       Row(
                         children: [
-                          Container(
-                            child: Text(
-                              "Personal details",
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.w400),
-                            ),
+                          const Text(
+                            "Personal details",
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.w400),
                           ),
                           const SizedBox(
                             width: 100,
                           ),
-                          Container(
-                            child: TextButton(
-                                onPressed: () {},
-                                child: Text(
-                                  "change",
-                                  style: TextStyle(
-                                      fontSize: 15, color: Color(0xFFFA4A0C)),
-                                )),
-                          )
+                          TextButton(
+                              onPressed: () {},
+                              child: const Text(
+                                "change",
+                                style: TextStyle(
+                                    fontSize: 15, color: Color(0xFFFA4A0C)),
+                              ))
                         ],
                       ),
                       Container(
@@ -96,9 +91,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Container(
-                                      padding: EdgeInsets.only(left: 5),
+                                      padding: const EdgeInsets.only(left: 5),
                                       height: 20,
-                                      child: Text(
+                                      child: const Text(
                                         "Marvis Ighedosa",
                                         style: TextStyle(
                                           fontSize: 18,
@@ -110,13 +105,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     ),
                                     Container(
                                       width: 165,
-                                      padding: EdgeInsets.all(5),
-                                      decoration: BoxDecoration(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: const BoxDecoration(
                                         border: Border(
                                           bottom: BorderSide(width: 0.5, color: Colors.black26)
                                         )
                                       ),
-                                      child: Text(
+                                      child: const Text(
                                         "Dosamarvis@gmail.com",
                                         style: TextStyle(
                                           color: Colors.black26,
@@ -128,13 +123,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     Container(
                                       width: 165,
                                       alignment: Alignment.topLeft,
-                                      padding: EdgeInsets.all(5),
-                                      decoration: BoxDecoration(
+                                      padding: const EdgeInsets.all(5),
+                                      decoration: const BoxDecoration(
                                         border: Border(
                                           bottom: BorderSide(width: 0.5, color: Colors.black26)
                                         )
                                       ),
-                                      child: Text(
+                                      child: const Text(
                                         "+234 9011039271",
                                         textAlign: TextAlign.start,
                                         style: TextStyle(
@@ -144,10 +139,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       ),
                                     ),
                                     Container(
-                                      padding: EdgeInsets.all(5),
+                                      padding: const EdgeInsets.all(5),
                                       height: 54,
                                       width: 180,
-                                      child: Text(
+                                      child: const Text(
                                         "No 15 uti street off ovie palace road effurun delta state",
                                         overflow: TextOverflow.visible,
                                         textAlign: TextAlign.start,
@@ -175,55 +170,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           padding: const EdgeInsets.only(left: 10),
                           child: Row(
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 20),
-                                child: Container(
-                                  child: Text(
-                                    "Orders"
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 155,
-                              ),
-                              Container(
-                                // height: 10,
-                                // width: 5,
-                                child: IconButton(onPressed: (){}, 
-                                icon: Icon(Icons.arrow_forward_ios)),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                      spacingBoxSized(),
-                      Container(
-                        height: 50,
-                        width: 300,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20)),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 10),
-                          child: Row(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 20),
-                                child: Container(
-                                  child: Text(
-                                    "Pending Reviews"
-                                  ),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 20),
+                                child: SizedBox(
+                                  width: 100,
+                                  child: FontWidget(text: "Orders", sizeFont: 16)
                                 ),
                               ),
                               const SizedBox(
                                 width: 100,
                               ),
-                              Container(
-                                // height: 10,
-                                // width: 5,
-                                child: IconButton(onPressed: (){}, 
-                                icon: Icon(Icons.arrow_forward_ios)),
-                              )
+                              IconButton(onPressed: (){}, 
+                              icon: const Icon(Icons.arrow_forward_ios))
                             ],
                           ),
                         ),
@@ -239,23 +197,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           padding: const EdgeInsets.only(left: 10),
                           child: Row(
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 20),
-                                child: Container(
-                                  child: Text(
-                                    "Faq"
-                                  ),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 20),
+                                child: SizedBox(
+                                  width: 150,
+                                  child: FontWidget(text: "Pending Reviews", sizeFont: 16)
                                 ),
                               ),
                               const SizedBox(
-                                width: 155,
+                                width: 50,
                               ),
-                              Container(
-                                // height: 10,
-                                // width: 5,
-                                child: IconButton(onPressed: (){}, 
-                                icon: Icon(Icons.arrow_forward_ios)),
-                              )
+                              IconButton(onPressed: (){}, 
+                              icon: const Icon(Icons.arrow_forward_ios))
                             ],
                           ),
                         ),
@@ -271,28 +224,53 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           padding: const EdgeInsets.only(left: 10),
                           child: Row(
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 20),
-                                child: Container(
-                                  child: Text(
-                                    "Help"
-                                  ),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 20),
+                                child: SizedBox(
+                                  width: 100,
+                                  child: FontWidget(text: "Faq", sizeFont: 16)
                                 ),
                               ),
                               const SizedBox(
-                                width: 155,
+                                width: 100,
                               ),
-                              Container(
-                                // height: 10,
-                                // width: 5,
-                                child: IconButton(onPressed: (){}, 
-                                icon: Icon(Icons.arrow_forward_ios)),
-                              )
+                              IconButton(onPressed: (){}, 
+                              icon: const Icon(Icons.arrow_forward_ios))
                             ],
                           ),
                         ),
                       ),
-                      ButtonWidget(textTitle: "Update")
+                      spacingBoxSized(),
+                      Container(
+                        height: 50,
+                        width: 300,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20)),
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Row(
+                            children: [
+                              const Padding(
+                                padding: EdgeInsets.only(left: 20),
+                                child: SizedBox(
+                                  width: 100,
+                                  child: FontWidget(text: "Help", sizeFont: 16)
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 100,
+                              ),
+                              IconButton(onPressed: (){}, 
+                              icon: const Icon(Icons.arrow_forward_ios))
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 50,
+                      ),
+                      const ButtonWidget(textTitle: "Update")
                     ],
                   ),
                 ),
