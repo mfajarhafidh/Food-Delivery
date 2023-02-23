@@ -21,8 +21,11 @@
 ## No Offers
 ![image](https://user-images.githubusercontent.com/94110628/220524549-be1fd1a6-c9be-48e5-b89e-64582ef79567.png)
 
-## Profile Screens
+## Profile Screen
 ![image](https://user-images.githubusercontent.com/94110628/220866563-a3eeacb3-e8e3-4d1b-8932-73e39750b330.png)
 
-## Profile Change Screens
+## Profile Change Screen
 ![image](https://user-images.githubusercontent.com/94110628/220874320-44cf8a67-7be7-4b63-98fb-a046106e67aa.png)
+
+## Shrink SlideMenu Drawer Screen
+![image](https://user-images.githubusercontent.com/94110628/220945693-d774bbd1-b499-4885-a3e0-cb3aee5c49d9.png)
