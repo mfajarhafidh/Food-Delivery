@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  shrink_sidemenu: ^2.0.0+2-null-safety
 
 dev_dependencies:
   flutter_test:
