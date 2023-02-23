@@ -25,4 +25,4 @@
 ![image](https://user-images.githubusercontent.com/94110628/220866563-a3eeacb3-e8e3-4d1b-8932-73e39750b330.png)
 
 ## Profile Change Screens
-![image](https://user-images.githubusercontent.com/94110628/220864747-ee7deefc-0c78-4103-b6bd-b1d28e416f3c.png)
+![image](https://user-images.githubusercontent.com/94110628/220874320-44cf8a67-7be7-4b63-98fb-a046106e67aa.png)
