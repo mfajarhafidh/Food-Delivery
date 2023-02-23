@@ -169,8 +169,7 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                               leading: Radio<RadioButtonProfile>(
                                 value: RadioButtonProfile.cardProfile,
                                 groupValue: _character,
-                                fillColor: MaterialStateColor.resolveWith(
-                                    (states) => Color(0xFFFA4A0C)),
+                                activeColor: Color(0xFFFA4A0C),
                                 onChanged: (RadioButtonProfile? value) {
                                   setState(() {
                                     _character = value;
@@ -208,8 +207,7 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                               leading: Radio<RadioButtonProfile>(
                                 value: RadioButtonProfile.bankAccountProfile,
                                 groupValue: _character,
-                                fillColor: MaterialStateColor.resolveWith(
-                                    (states) => Color(0xFFFA4A0C)),
+                                activeColor: Color(0xFFFA4A0C),
                                 onChanged: (RadioButtonProfile? value) {
                                   setState(() {
                                     _character = value;
@@ -247,8 +245,7 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                               leading: Radio<RadioButtonProfile>(
                                 value: RadioButtonProfile.paypalProfile,
                                 groupValue: _character,
-                                fillColor: MaterialStateColor.resolveWith(
-                                    (states) => Color(0xFFFA4A0C)),
+                                activeColor: Color(0xFFFA4A0C),
                                 onChanged: (RadioButtonProfile? value) {
                                   setState(() {
                                     _character = value;
