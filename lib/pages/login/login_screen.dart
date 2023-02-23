@@ -1,3 +1,4 @@
+import 'package:assigment_isi/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -13,7 +14,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return SafeArea(
       child: Scaffold(
         resizeToAvoidBottomInset: false,
-        backgroundColor: const Color.fromARGB(239, 209, 209, 209),
+        backgroundColor: const Color(0xFFF5F5F8),
         body: ListView(
           children: [
             SizedBox(
@@ -68,25 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SizedBox(
-                          width: 300,
-                          height: 50,
-                          child: TextButton(
-                            style: TextButton.styleFrom(
-                              backgroundColor:
-                                  const Color.fromARGB(255, 250, 74, 12),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                            ),
-                            onPressed: () {},
-                            child: const Text(
-                              "Login",
-                              style: TextStyle(
-                                  color: Color(0xffffffff), fontSize: 17),
-                            ),
-                          ),
-                        ),
+                        ButtonWidget(textTitle: "Login")
                       ],
                     ),
                   ],
