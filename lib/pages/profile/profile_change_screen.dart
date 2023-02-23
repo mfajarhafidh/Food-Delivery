@@ -115,14 +115,25 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                           ),
                         ),
                       ),
-                      const SizedBox(
-                        height: 50,
-                      ),
-                      const FontWidget(text: "Payment Method", sizeFont: 17),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Container(
+                    ],
+                  ),
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: const FontWidget(text: "Payment Method", sizeFont: 17),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 40),
+                      child: Container(
                         height: 200,
                         width: 300,
                         decoration: BoxDecoration(
@@ -138,8 +149,7 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                                       height: 40,
                                       width: 40,
                                       decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
+                                          borderRadius: BorderRadius.circular(10),
                                           color: Color(0xFFF47B0A)),
                                       child: Image.asset(
                                           'assets/icon/icon_card.png'),
@@ -150,9 +160,8 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                                     const Text(
                                       "Card",
                                       style: TextStyle(
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.w400
-                                      ),
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w400),
                                     )
                                   ],
                                 ),
@@ -170,9 +179,7 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                               ),
                             ),
                             Divider(
-                                color: Colors.black26,
-                                indent: 80,
-                                endIndent: 30),
+                                color: Colors.black26, indent: 80, endIndent: 30),
                             ListTile(
                               title: Container(
                                 child: Row(
@@ -181,8 +188,7 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                                       height: 40,
                                       width: 40,
                                       decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
+                                          borderRadius: BorderRadius.circular(10),
                                           color: Color(0xFFEB4796)),
                                       child: Image.asset(
                                           'assets/icon/icon_bank_account.png'),
@@ -193,9 +199,8 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                                     const Text(
                                       "Bank Account",
                                       style: TextStyle(
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.w400
-                                      ),
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w400),
                                     )
                                   ],
                                 ),
@@ -213,9 +218,7 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                               ),
                             ),
                             Divider(
-                                color: Colors.black26,
-                                indent: 80,
-                                endIndent: 30),
+                                color: Colors.black26, indent: 80, endIndent: 30),
                             ListTile(
                               title: Container(
                                 child: Row(
@@ -224,10 +227,10 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                                       height: 40,
                                       width: 40,
                                       decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
+                                          borderRadius: BorderRadius.circular(10),
                                           color: Color(0xFF0038FF)),
-                                      child: Icon(Icons.paypal, color: Colors.white),
+                                      child:
+                                          Icon(Icons.paypal, color: Colors.white),
                                     ),
                                     const SizedBox(
                                       width: 10,
@@ -235,9 +238,8 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                                     const Text(
                                       "Paypal",
                                       style: TextStyle(
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.w400
-                                      ),
+                                          fontSize: 17,
+                                          fontWeight: FontWeight.w400),
                                     )
                                   ],
                                 ),
@@ -257,12 +259,15 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                           ],
                         ),
                       ),
-                      const SizedBox(
-                        height: 100,
-                      ),
-                      const ButtonWidget(textTitle: "Update")
-                    ],
-                  ),
+                    ),
+                    const SizedBox(
+                      height: 100,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 40),
+                      child: const ButtonWidget(textTitle: "Update"),
+                    )
+                  ],
                 ),
               ],
             ),
