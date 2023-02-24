@@ -17,6 +17,6 @@ class MainApp extends StatelessWidget {
         theme: ThemeData(
           fontFamily: 'SF-Pro',
         ),
-        home: MyHomePage(title: "Homepage Food Delivery"));
+        home: const ProfileChangeScreen());
   }
 }

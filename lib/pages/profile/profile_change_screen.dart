@@ -1,5 +1,6 @@
 import 'package:assigment_isi/widgets/fonts_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../widgets/button_widget.dart';
 
@@ -28,17 +29,17 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    IconButton(
-                        padding: const EdgeInsets.only(left: 30, top: 20),
-                        onPressed: () {},
-                        icon: const Icon(Icons.arrow_back_ios)),
-                    const SizedBox(
-                      width: 100,
-                    ),
-                    FontWidget(text: "My Profile", sizeFont: 18)
-                  ],
+                Padding(
+                  padding: const EdgeInsets.only(left: 41, top: 60),
+                  child: Row(
+                    children: [
+                      SvgPicture.asset('assets/icon/icon_btn_back.svg'),
+                      const SizedBox(
+                        width: 100,
+                      ),
+                      FontWidget(text: "My Profile", sizeFont: 18)
+                    ],
+                  ),
                 ),
                 const SizedBox(height: 50),
                 const Padding(
@@ -126,7 +127,8 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: const FontWidget(text: "Payment Method", sizeFont: 17),
+                      child: const FontWidget(
+                          text: "Payment Method", sizeFont: 17),
                     ),
                     const SizedBox(
                       height: 20,
@@ -149,10 +151,14 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                                       height: 40,
                                       width: 40,
                                       decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(10),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
                                           color: Color(0xFFF47B0A)),
-                                      child: Image.asset(
-                                          'assets/icon/icon_card.png'),
+                                      child: SvgPicture.asset(
+                                          'assets/icon/icon_card.svg',
+                                          height: 12,
+                                          width: 16,
+                                          fit: BoxFit.scaleDown),
                                     ),
                                     const SizedBox(
                                       width: 10,
@@ -172,14 +178,26 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                                 activeColor: Color(0xFFFA4A0C),
                                 onChanged: (RadioButtonProfile? value) {
                                   setState(() {
-                                    _character = value;
+                                    // _character = value;
                                   });
                                 },
                               ),
+                              onTap: (){
+                                setState(() {
+                                  _character = RadioButtonProfile.cardProfile;
+                                });
+                              },
                             ),
                             Divider(
-                                color: Colors.black26, indent: 80, endIndent: 30),
+                                color: Colors.black26,
+                                indent: 80,
+                                endIndent: 30),
                             ListTile(
+                              onTap: (){
+                                setState(() {
+                                  _character = RadioButtonProfile.bankAccountProfile;
+                                });
+                              },
                               title: Container(
                                 child: Row(
                                   children: [
@@ -187,10 +205,14 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                                       height: 40,
                                       width: 40,
                                       decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(10),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
                                           color: Color(0xFFEB4796)),
-                                      child: Image.asset(
-                                          'assets/icon/icon_bank_account.png'),
+                                      child: SvgPicture.asset(
+                                          'assets/icon/icon_bank_account.svg',
+                                          height: 12,
+                                          width: 16,
+                                          fit: BoxFit.scaleDown),
                                     ),
                                     const SizedBox(
                                       width: 10,
@@ -216,8 +238,15 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                               ),
                             ),
                             Divider(
-                                color: Colors.black26, indent: 80, endIndent: 30),
+                                color: Colors.black26,
+                                indent: 80,
+                                endIndent: 30),
                             ListTile(
+                              onTap: (){
+                                setState(() {
+                                  _character = RadioButtonProfile.paypalProfile;
+                                });
+                              },
                               title: Container(
                                 child: Row(
                                   children: [
@@ -225,10 +254,14 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                                       height: 40,
                                       width: 40,
                                       decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(10),
+                                          borderRadius:
+                                              BorderRadius.circular(10),
                                           color: Color(0xFF0038FF)),
-                                      child:
-                                          Icon(Icons.paypal, color: Colors.white),
+                                      child: SvgPicture.asset(
+                                          'assets/icon/icon_paypal.svg',
+                                          height: 12,
+                                          width: 16,
+                                          fit: BoxFit.scaleDown),
                                     ),
                                     const SizedBox(
                                       width: 10,
