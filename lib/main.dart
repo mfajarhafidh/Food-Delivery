@@ -17,6 +17,6 @@ class MainApp extends StatelessWidget {
         theme: ThemeData(
           fontFamily: 'SF-Pro',
         ),
-        home: const ProfileChangeScreen());
+        home: MyHomePage(title: "Drawer"));
   }
 }

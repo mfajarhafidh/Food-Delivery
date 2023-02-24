@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shrink_sidemenu/shrink_sidemenu.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -84,8 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 dividerListTile(),
                 ListTile(
                   onTap: () {},
-                  leading: const Icon(Icons.shopping_cart_checkout,
-                      size: 20.0, color: Colors.white),
+                  leading: SvgPicture.asset('assets/icon/icon_orders.svg'),
                   title: const Text("Orders",
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
@@ -106,8 +106,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 dividerListTile(),
                 ListTile(
                   onTap: () {},
-                  leading: const Icon(Icons.newspaper_outlined,
-                      size: 20.0, color: Colors.white),
+                  leading: SvgPicture.asset('assets/icon/icon_privacy_policy.svg'),
                   title: const Text("Privacy Policy",
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
@@ -117,8 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 dividerListTile(),
                 ListTile(
                   onTap: () {},
-                  leading: const Icon(Icons.shield_outlined,
-                      size: 20.0, color: Colors.white),
+                  leading: SvgPicture.asset('assets/icon/icon_security.svg'),
                   title: const Text("Security",
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
