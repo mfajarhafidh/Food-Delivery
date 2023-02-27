@@ -130,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   onTap: () {},
                   title: Row(
                     children: [
-                      const Text("Sign-Out",
+                      const Text("Sign-out",
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.w600)),
                       const SizedBox(
