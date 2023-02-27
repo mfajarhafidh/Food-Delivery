@@ -16,7 +16,7 @@ class FoodCardWidget extends StatelessWidget {
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) {
-              return DetailProductScreen();
+              return const DetailProductScreen();
             },
           ),
         );
@@ -36,8 +36,8 @@ class FoodCardWidget extends StatelessWidget {
                   color: Colors.white,
                   boxShadow: [
                     BoxShadow(
-                        offset: Offset(0, 4),
-                        color: Color(0xFF393F3F).withOpacity(0.07),
+                        offset: const Offset(0, 4),
+                        color: const Color(0xFF393F3F).withOpacity(0.07),
                         blurRadius: 40)
                   ],
                 ),
@@ -45,7 +45,7 @@ class FoodCardWidget extends StatelessWidget {
                   child: Text(
                     text,
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ),
               ),
@@ -61,13 +61,13 @@ class FoodCardWidget extends StatelessWidget {
                   color: Colors.grey[500]!.withOpacity(0.3),
                   boxShadow: [
                     BoxShadow(
-                        offset: Offset(0, 4),
-                        color: Color(0xFF393F3F).withOpacity(0.07),
+                        offset: const Offset(0, 4),
+                        color: const Color(0xFF393F3F).withOpacity(0.07),
                         blurRadius: 40)
                   ],
                 ),
                 child: CircleAvatar(
-                  backgroundImage: AssetImage('${image}'),
+                  backgroundImage: AssetImage(image),
                 ),
               ),
             ),

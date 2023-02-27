@@ -40,7 +40,7 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                       const SizedBox(
                         width: 100,
                       ),
-                      FontWidget(text: "My Profile", sizeFont: 18)
+                      const FontWidget(text: "My Profile", sizeFont: 18)
                     ],
                   ),
                 ),
@@ -128,9 +128,9 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                     const SizedBox(
                       height: 50,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: const FontWidget(
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      child: FontWidget(
                           text: "Payment Method", sizeFont: 17),
                     ),
                     const SizedBox(
@@ -147,38 +147,36 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                         child: Column(
                           children: [
                             ListTile(
-                              title: Container(
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      height: 40,
-                                      width: 40,
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          color: Color(0xFFF47B0A)),
-                                      child: SvgPicture.asset(
-                                          'assets/icon/icon_card.svg',
-                                          height: 12,
-                                          width: 16,
-                                          fit: BoxFit.scaleDown),
-                                    ),
-                                    const SizedBox(
-                                      width: 10,
-                                    ),
-                                    const Text(
-                                      "Card",
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.w400),
-                                    )
-                                  ],
-                                ),
+                              title: Row(
+                                children: [
+                                  Container(
+                                    height: 40,
+                                    width: 40,
+                                    decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(10),
+                                        color: const Color(0xFFF47B0A)),
+                                    child: SvgPicture.asset(
+                                        'assets/icon/icon_card.svg',
+                                        height: 12,
+                                        width: 16,
+                                        fit: BoxFit.scaleDown),
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  const Text(
+                                    "Card",
+                                    style: TextStyle(
+                                        fontSize: 17,
+                                        fontWeight: FontWeight.w400),
+                                  )
+                                ],
                               ),
                               leading: Radio<RadioButtonProfile>(
                                 value: RadioButtonProfile.cardProfile,
                                 groupValue: _character,
-                                activeColor: Color(0xFFFA4A0C),
+                                activeColor: const Color(0xFFFA4A0C),
                                 onChanged: (RadioButtonProfile? value) {
                                   setState(() {
                                     // _character = value;
@@ -191,7 +189,7 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                                 });
                               },
                             ),
-                            Divider(
+                            const Divider(
                                 color: Colors.black26,
                                 indent: 80,
                                 endIndent: 30),
@@ -201,38 +199,36 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                                   _character = RadioButtonProfile.bankAccountProfile;
                                 });
                               },
-                              title: Container(
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      height: 40,
-                                      width: 40,
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          color: Color(0xFFEB4796)),
-                                      child: SvgPicture.asset(
-                                          'assets/icon/icon_bank_account.svg',
-                                          height: 12,
-                                          width: 16,
-                                          fit: BoxFit.scaleDown),
-                                    ),
-                                    const SizedBox(
-                                      width: 10,
-                                    ),
-                                    const Text(
-                                      "Bank Account",
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.w400),
-                                    )
-                                  ],
-                                ),
+                              title: Row(
+                                children: [
+                                  Container(
+                                    height: 40,
+                                    width: 40,
+                                    decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(10),
+                                        color: const Color(0xFFEB4796)),
+                                    child: SvgPicture.asset(
+                                        'assets/icon/icon_bank_account.svg',
+                                        height: 12,
+                                        width: 16,
+                                        fit: BoxFit.scaleDown),
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  const Text(
+                                    "Bank Account",
+                                    style: TextStyle(
+                                        fontSize: 17,
+                                        fontWeight: FontWeight.w400),
+                                  )
+                                ],
                               ),
                               leading: Radio<RadioButtonProfile>(
                                 value: RadioButtonProfile.bankAccountProfile,
                                 groupValue: _character,
-                                activeColor: Color(0xFFFA4A0C),
+                                activeColor: const Color(0xFFFA4A0C),
                                 onChanged: (RadioButtonProfile? value) {
                                   setState(() {
                                     _character = value;
@@ -240,7 +236,7 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                                 },
                               ),
                             ),
-                            Divider(
+                            const Divider(
                                 color: Colors.black26,
                                 indent: 80,
                                 endIndent: 30),
@@ -250,38 +246,36 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                                   _character = RadioButtonProfile.paypalProfile;
                                 });
                               },
-                              title: Container(
-                                child: Row(
-                                  children: [
-                                    Container(
-                                      height: 40,
-                                      width: 40,
-                                      decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                          color: Color(0xFF0038FF)),
-                                      child: SvgPicture.asset(
-                                          'assets/icon/icon_paypal.svg',
-                                          height: 12,
-                                          width: 16,
-                                          fit: BoxFit.scaleDown),
-                                    ),
-                                    const SizedBox(
-                                      width: 10,
-                                    ),
-                                    const Text(
-                                      "Paypal",
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.w400),
-                                    )
-                                  ],
-                                ),
+                              title: Row(
+                                children: [
+                                  Container(
+                                    height: 40,
+                                    width: 40,
+                                    decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(10),
+                                        color: const Color(0xFF0038FF)),
+                                    child: SvgPicture.asset(
+                                        'assets/icon/icon_paypal.svg',
+                                        height: 12,
+                                        width: 16,
+                                        fit: BoxFit.scaleDown),
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  const Text(
+                                    "Paypal",
+                                    style: TextStyle(
+                                        fontSize: 17,
+                                        fontWeight: FontWeight.w400),
+                                  )
+                                ],
                               ),
                               leading: Radio<RadioButtonProfile>(
                                 value: RadioButtonProfile.paypalProfile,
                                 groupValue: _character,
-                                activeColor: Color(0xFFFA4A0C),
+                                activeColor: const Color(0xFFFA4A0C),
                                 onChanged: (RadioButtonProfile? value) {
                                   setState(() {
                                     _character = value;
@@ -296,9 +290,9 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                     const SizedBox(
                       height: 100,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 40),
-                      child: const ButtonWidget(textTitle: "Update", screen: ProfileScreen()),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 40),
+                      child: ButtonWidget(textTitle: "Update", screen: ProfileScreen()),
                     )
                   ],
                 ),

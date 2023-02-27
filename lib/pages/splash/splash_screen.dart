@@ -1,4 +1,3 @@
-import 'package:assigment_isi/pages/tab_slides/login/login_screen.dart';
 import 'package:assigment_isi/pages/tab_slides/tab_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -19,8 +18,8 @@ class SplashScreen extends StatelessWidget {
           // ),
           Container(
             alignment: Alignment.topLeft,
-            padding: EdgeInsets.only(left: 40),
-            child: CircleAvatar(
+            padding: const EdgeInsets.only(left: 40),
+            child: const CircleAvatar(
               backgroundColor: Colors.white,
               radius: 40,
               child: CircleAvatar(
@@ -33,9 +32,9 @@ class SplashScreen extends StatelessWidget {
           const SizedBox(
             height: 5,
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 40),
-            child: const Text(
+            child: Text(
               'Food For Everyone',
               style: TextStyle(
                 fontSize: 60,
@@ -71,7 +70,7 @@ class SplashScreen extends StatelessWidget {
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) {
-                      return TabSlideScreen();
+                      return const TabSlideScreen();
                     },
                   ),
                 ),

@@ -1,13 +1,19 @@
 import 'package:assigment_isi/pages/checkout/checkout_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
 import '../../utils/color_schema.dart';
 import '../../widgets/button_widget.dart';
 
-class CartScreen extends StatelessWidget {
+class CartScreen extends StatefulWidget {
+
+  const CartScreen({super.key});
+
+  @override
+  State<CartScreen> createState() => _CartScreenState();
+}
+
+class _CartScreenState extends State<CartScreen> {
   List<MyModel> models = [
     MyModel(name: 'product1', image: 'assets/img/food1.png', price: 215.80),
     MyModel(name: 'product2', image: 'assets/img/food1.png', price: 415.30),
@@ -32,11 +38,11 @@ class CartScreen extends StatelessWidget {
         elevation: 0.0,
         centerTitle: true,
         leading: IconButton(
-          icon: Icon(Icons.arrow_back_ios),
+          icon: const Icon(Icons.arrow_back_ios),
           onPressed: (() {Navigator.pop(context);}),
           color: Colors.black,
         ),
-        title: Text(
+        title: const Text(
           'Cart',
           style: TextStyle(color: Colors.black),
         ),
@@ -52,25 +58,25 @@ class CartScreen extends StatelessWidget {
                     children: [
                       Slidable(
                         // Specify a key if the Slidable is dismissible.
-                        key: ValueKey(0),
+                        key: const ValueKey(0),
                         // The end action pane is the one at the right or the bottom side.
                         endActionPane: ActionPane(
-                          motion: ScrollMotion(),
+                          motion: const ScrollMotion(),
                           children: [
                             CustomSlidableAction(
-                                padding: EdgeInsets.only(left: 15),
+                                padding: const EdgeInsets.only(left: 15),
                                 onPressed: ((context) {}),
                                 child: CircleAvatar(
                                   radius: 26,
                                   backgroundColor: deepOrange800,
                                   child: IconButton(
                                     onPressed: () {},
-                                    icon: Icon(Icons.favorite),
+                                    icon: const Icon(Icons.favorite),
                                     color: Colors.white,
                                   ),
                                 )),
                             CustomSlidableAction(
-                                padding: EdgeInsets.only(right: 30),
+                                padding: const EdgeInsets.only(right: 30),
                                 onPressed: ((context) {}),
                                 child: CircleAvatar(
                                   radius: 26,
@@ -84,8 +90,8 @@ class CartScreen extends StatelessWidget {
                   );
                 })),
           ),
-          ButtonWidget(textTitle: 'Complete order', screen: CheckoutScreen()),
-          SizedBox(
+          const ButtonWidget(textTitle: 'Complete order', screen: CheckoutScreen()),
+          const SizedBox(
             height: 16,
           )
         ],
@@ -94,7 +100,7 @@ class CartScreen extends StatelessWidget {
   }
 
   Widget buildListTile(MyModel model) => ListTile(
-        contentPadding: EdgeInsets.symmetric(
+        contentPadding: const EdgeInsets.symmetric(
           horizontal: 20,
           vertical: 16,
         ),
@@ -108,17 +114,17 @@ class CartScreen extends StatelessWidget {
               children: [
                 Text(
                   model.name,
-                  style: TextStyle(fontSize: 20),
+                  style: const TextStyle(fontSize: 20),
                 ),
                 Text(
                   model.price.toString(),
-                  style: TextStyle(fontSize: 20),
+                  style: const TextStyle(fontSize: 20),
                 ),
               ],
             ),
           ],
         ),
-        trailing: Icon(Icons.add),
+        trailing: const Icon(Icons.add),
         onTap: () {},
       );
 }

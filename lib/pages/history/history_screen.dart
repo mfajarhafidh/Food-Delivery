@@ -1,6 +1,4 @@
 import 'package:assigment_isi/pages/bottom_bar/bottom_bar_screen.dart';
-import 'package:assigment_isi/pages/home/home_screen.dart';
-import 'package:assigment_isi/pages/menu_food/food_search_screen.dart';
 import 'package:assigment_isi/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -19,14 +17,13 @@ class HistoryScreen extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Container(
-                      child: IconButton(
-                          onPressed: () {},
-                          icon: Image.asset('assets/img/btn_back.png'))),
-                  Container(
+                  IconButton(
+                      onPressed: () {},
+                      icon: Image.asset('assets/img/btn_back.png')),
+                  const SizedBox(
                     height: 30,
                     width: 300,
-                    child: const Text(
+                    child: Text(
                         textAlign: TextAlign.center,
                         "History",
                         style: TextStyle(

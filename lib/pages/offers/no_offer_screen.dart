@@ -15,7 +15,7 @@ class NoOfferScreen extends StatelessWidget {
             children: [
               IconButton(
                   alignment: Alignment.topLeft,
-                  padding: EdgeInsets.only(left: 30, top: 40),
+                  padding: const EdgeInsets.only(left: 30, top: 40),
                   onPressed: () {
                     Navigator.pop(context);
                   },
@@ -23,31 +23,31 @@ class NoOfferScreen extends StatelessWidget {
               const SizedBox(
                 height: 40,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 20),
+              const Padding(
+                padding: EdgeInsets.only(left: 20),
                 child: Text(
                   "My Offers",
                   style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                 ),
               ),
               Column(
-                children: [
-                  const SizedBox(
+                children: const [
+                  SizedBox(
                     height: 200,
                   ),
-                  const Text(
+                  Text(
                     "Oh Snap! No Offers Yet",
                     style: TextStyle(
                         color: Colors.black,
                         fontSize: 34,
                         fontWeight: FontWeight.bold),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 20,
                   ),
-                  const Text("Bella doesn't have any offers",
+                  Text("Bella doesn't have any offers",
                       style: TextStyle(fontSize: 18, color: Colors.black26)),
-                  const Text("yet please check again.",
+                  Text("yet please check again.",
                       style: TextStyle(fontSize: 18, color: Colors.black26)),
                 ],
               )

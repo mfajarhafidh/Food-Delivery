@@ -2,8 +2,6 @@ import 'package:assigment_isi/pages/history/history_screen.dart';
 import 'package:assigment_isi/pages/home/home_screen.dart';
 import 'package:assigment_isi/pages/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 import '../../utils/color_schema.dart';
 

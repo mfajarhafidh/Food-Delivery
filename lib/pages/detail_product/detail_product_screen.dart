@@ -12,14 +12,7 @@ class DetailProductScreen extends StatefulWidget {
 
 class _DetailProductScreenState extends State<DetailProductScreen> {
   Color _iconColor = Colors.redAccent;
-  bool _selectedIndex = true;
   int position = 1;
-  _onSelected(bool index) {
-    //https://inducesmile.com/google-flutter/how-to-change-the-background-color-of-selected-listview-in-flutter/
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
 
   void pressedFavorite() {}
 
@@ -42,7 +35,7 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                         onPressed: () {
                           Navigator.pop(context);
                         },
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.arrow_back_ios_new,
                           size: 20,
                           color: Colors.black,
@@ -69,18 +62,16 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                   width: 275,
                   child: Image.asset('assets/img/food_0.png'),
                 ),
-                Container(
-                  child: Text(
-                    'Veggie tomato mix',
-                    style: TextStyle(
-                        fontSize: 28,
-                        fontFamily: 'SF Pro',
-                        fontWeight: FontWeight.bold),
-                  ),
+                const Text(
+                  'Veggie tomato mix',
+                  style: TextStyle(
+                      fontSize: 28,
+                      fontFamily: 'SF Pro',
+                      fontWeight: FontWeight.bold),
                 ),
                 Container(
-                  padding: EdgeInsets.only(top: 10),
-                  child: Text(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: const Text(
                     'N1,900',
                     style: TextStyle(
                         color: Color(0xffFA4A0C),
@@ -95,8 +86,8 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Container(
-                        padding: EdgeInsets.only(top: 21.5),
-                        child: Text(
+                        padding: const EdgeInsets.only(top: 21.5),
+                        child: const Text(
                           'Delivery info',
                           textAlign: TextAlign.start,
                           style: TextStyle(
@@ -105,16 +96,14 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                               fontWeight: FontWeight.w600),
                         ),
                       ),
-                      Container(
-                        child: Text(
-                            'Delivered between monday aug and thursday 20 from 8pm to 91:32 pm'),
-                      ),
-                      SizedBox(
+                      const Text(
+                          'Delivered between monday aug and thursday 20 from 8pm to 91:32 pm'),
+                      const SizedBox(
                         height: 20,
                       ),
                       Container(
-                        padding: EdgeInsets.symmetric(vertical: 5),
-                        child: Text(
+                        padding: const EdgeInsets.symmetric(vertical: 5),
+                        child: const Text(
                           'Return policy',
                           textAlign: TextAlign.start,
                           style: TextStyle(
@@ -123,12 +112,10 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                               fontWeight: FontWeight.w600),
                         ),
                       ),
-                      Container(
-                        child: Text(
-                            'All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately.'),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 20),
+                      const Text(
+                          'All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately.'),
+                      const Padding(
+                        padding: EdgeInsets.only(bottom: 20),
                         child: Ctabutton(textTitle: 'Add to cart', 
                         onPressed: CartScreen(),
                         ),

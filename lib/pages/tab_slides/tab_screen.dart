@@ -34,14 +34,14 @@ class TabSlideScreen extends StatelessWidget {
                               bottomRight: Radius.circular(30),
                             )),
                         child: TabBar(
-                          labelStyle: TextStyle(
+                          labelStyle: const TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 18),
                           indicatorColor: deepOrange800,
                           indicatorPadding:
-                              EdgeInsets.symmetric(horizontal: 50),
+                              const EdgeInsets.symmetric(horizontal: 50),
                           labelColor: Colors.black,
                           unselectedLabelColor: Colors.black,
-                          tabs: [
+                          tabs: const [
                             Tab(text: 'Login'),
                             Tab(text: 'Sign-up'),
                           ],

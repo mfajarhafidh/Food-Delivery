@@ -1,15 +1,10 @@
 import 'package:assigment_isi/pages/cart/cart_screen.dart';
-import 'package:assigment_isi/pages/history/history_screen.dart';
 import 'package:assigment_isi/pages/menu_food/food_search_screen.dart';
 import 'package:assigment_isi/pages/offers/no_offer_screen.dart';
 import 'package:assigment_isi/pages/orders/order_screen.dart';
 import 'package:assigment_isi/pages/profile/profile_screen.dart';
-import 'package:assigment_isi/pages/tab_slides/login/login_screen.dart';
 import 'package:assigment_isi/widgets/food_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shrink_sidemenu/shrink_sidemenu.dart';
 
@@ -59,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
             centerTitle: true,
             leading: IconButton(
               onPressed: () {toggleMenu();},
-              icon: Icon(
+              icon: const Icon(
                 Icons.menu,
                 color: Colors.black,
               ),
@@ -70,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                       builder: (context) {
-                        return CartScreen();
+                        return const CartScreen();
                     },
                   ),
                 );
@@ -87,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Delicious \nfood for you",
                   style: TextStyle(
                     color: Colors.black,
@@ -95,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20.0,
                 ),
                 //To add some elevation & border radius to text field need to wrap in Material
@@ -107,14 +102,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       Navigator.of(context).push(
                       MaterialPageRoute(
                       builder: (context) {
-                        return MenuFoodScreen();
+                        return const MenuFoodScreen();
                     },
                   ),
                 );
                     },
                     textAlign: TextAlign.start,
                     textAlignVertical: TextAlignVertical.center,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                         hintText: "Search",
                         prefixIcon: Icon(
                           Icons.search_sharp,
@@ -123,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         border: InputBorder.none),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 DefaultTabController(
@@ -135,8 +130,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           indicatorColor: deepOrange800,
                           labelColor: deepOrange800,
                           unselectedLabelColor: grey400,
-                          labelPadding: EdgeInsets.symmetric(horizontal: 8.0),
-                          tabs: [
+                          labelPadding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          tabs: const [
                             Tab(
                               text: "Food",
                             ),
@@ -151,7 +146,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         Align(
@@ -168,104 +163,96 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Expanded(
                             child: TabBarView(clipBehavior: Clip.none, children: [
-                          Container(
-                            child: ListView(
-                              scrollDirection: Axis.horizontal,
-                              children: [
-                                FoodCardWidget(
-                                    image: "assets/img/food1.png",
-                                    text: "Vegie tomato mix"),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                FoodCardWidget(
-                                    image: "assets/img/food1.png",
-                                    text: "Vegie tomato mix"),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                FoodCardWidget(
-                                    image: "assets/img/food1.png",
-                                    text: "Vegie tomato mix"),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                FoodCardWidget(
-                                    image: "assets/img/food1.png",
-                                    text: "Vegie tomato mix"),
-                              ],
-                            ),
+                          ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: const [
+                              FoodCardWidget(
+                                  image: "assets/img/food1.png",
+                                  text: "Vegie tomato mix"),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              FoodCardWidget(
+                                  image: "assets/img/food1.png",
+                                  text: "Vegie tomato mix"),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              FoodCardWidget(
+                                  image: "assets/img/food1.png",
+                                  text: "Vegie tomato mix"),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              FoodCardWidget(
+                                  image: "assets/img/food1.png",
+                                  text: "Vegie tomato mix"),
+                            ],
                           ),
-                          Container(
-                            child: ListView(
-                              scrollDirection: Axis.horizontal,
-                              children: [
-                                FoodCardWidget(
-                                    image: "assets/img/food1.png",
-                                    text: "Bubur ayam"),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                FoodCardWidget(
-                                    image: "assets/img/food1.png",
-                                    text: "Bubur ayam"),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                FoodCardWidget(
-                                    image: "assets/img/food1.png",
-                                    text: "Bubur ayam"),
-                              ],
-                            ),
+                          ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: const [
+                              FoodCardWidget(
+                                  image: "assets/img/food1.png",
+                                  text: "Bubur ayam"),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              FoodCardWidget(
+                                  image: "assets/img/food1.png",
+                                  text: "Bubur ayam"),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              FoodCardWidget(
+                                  image: "assets/img/food1.png",
+                                  text: "Bubur ayam"),
+                            ],
                           ),
-                          Container(
-                            child: ListView(
-                              scrollDirection: Axis.horizontal,
-                              children: [
-                                FoodCardWidget(
-                                    image: "assets/img/food1.png",
-                                    text: "Nasi padang"),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                FoodCardWidget(
-                                    image: "assets/img/food1.png",
-                                    text: "Nasi padang"),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                FoodCardWidget(
-                                    image: "assets/img/food1.png",
-                                    text: "Nasi padang"),
-                              ],
-                            ),
+                          ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: const [
+                              FoodCardWidget(
+                                  image: "assets/img/food1.png",
+                                  text: "Nasi padang"),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              FoodCardWidget(
+                                  image: "assets/img/food1.png",
+                                  text: "Nasi padang"),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              FoodCardWidget(
+                                  image: "assets/img/food1.png",
+                                  text: "Nasi padang"),
+                            ],
                           ),
-                          Container(
-                            child: ListView(
-                              scrollDirection: Axis.horizontal,
-                              children: [
-                                FoodCardWidget(
-                                    image: "assets/img/food1.png",
-                                    text: "Es campur"),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                FoodCardWidget(
-                                    image: "assets/img/food1.png",
-                                    text: "Es campur"),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                FoodCardWidget(
-                                    image: "assets/img/food1.png",
-                                    text: "Es campur"),
-                              ],
-                            ),
+                          ListView(
+                            scrollDirection: Axis.horizontal,
+                            children: const [
+                              FoodCardWidget(
+                                  image: "assets/img/food1.png",
+                                  text: "Es campur"),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              FoodCardWidget(
+                                  image: "assets/img/food1.png",
+                                  text: "Es campur"),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              FoodCardWidget(
+                                  image: "assets/img/food1.png",
+                                  text: "Es campur"),
+                            ],
                           ),
                         ]))
                       ],
@@ -295,7 +282,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                       builder: (context) {
-                        return ProfileScreen();
+                        return const ProfileScreen();
                     },
                   ),
                 );
@@ -314,7 +301,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                       builder: (context) {
-                        return OrderScreen();
+                        return const OrderScreen();
                     },
                   ),
                 );
@@ -332,7 +319,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                       builder: (context) {
-                        return NoOfferScreen();
+                        return const NoOfferScreen();
                     },
                   ),
                 );
@@ -373,20 +360,20 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                       builder: (context) {
-                        return TabSlideScreen();
+                        return const TabSlideScreen();
                     },
                   ),
                 );
                   },
                   title: Row(
-                    children: [
-                      const Text("Sign-out",
+                    children: const [
+                      Text("Sign-out",
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.w600)),
-                      const SizedBox(
+                      SizedBox(
                         width: 10,
                       ),
-                      const Icon(Icons.arrow_forward,
+                      Icon(Icons.arrow_forward,
                           size: 20.0, color: Colors.white)
                     ],
                   ),

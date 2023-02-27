@@ -7,13 +7,9 @@ class ButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    final height = size.height;
-    final width = size.width;
     return SizedBox(
       width: 310,
       height: 70,
-      // height: height/2,
       child: TextButton(
         style: TextButton.styleFrom(
           backgroundColor: const Color(0xFFFA4A0C),

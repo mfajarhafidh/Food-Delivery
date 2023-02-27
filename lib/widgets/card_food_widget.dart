@@ -11,7 +11,7 @@ class FoodCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 8.0),
+      margin: const EdgeInsets.only(top: 8.0),
       child: SizedBox(
         child: Stack(
           clipBehavior: Clip.none,
@@ -21,7 +21,7 @@ class FoodCard extends StatelessWidget {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) {
-                      return DetailProductScreen();
+                      return const DetailProductScreen();
                     },
                   ),
                 );
@@ -35,7 +35,7 @@ class FoodCard extends StatelessWidget {
                       color: Colors.grey.withOpacity(0.5),
                       spreadRadius: 1,
                       blurRadius: 1,
-                      offset: Offset(0, 1), // changes position of shadow
+                      offset: const Offset(0, 1), // changes position of shadow
                     ),
                   ],
                     borderRadius: BorderRadius.circular(30),
@@ -45,29 +45,24 @@ class FoodCard extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 70.0),
                     child: Column(
                       children: [
-                        Container(
-                          child: Text(
-                              title,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                            ),
+                        Text(
+                            title,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                            fontSize: 20,
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
                           ),
-            
                         ),
-                        Container(
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 10),
-                            child: Text(
-                              "N1,900",
-                              style: TextStyle(
-                                  fontSize: 17,
-                                  color: Colors.red,
-                                  fontWeight: FontWeight.bold),
-                              textAlign: TextAlign.center,
-                            ),
+                        const Padding(
+                          padding: EdgeInsets.only(top: 10),
+                          child: Text(
+                            "N1,900",
+                            style: TextStyle(
+                                fontSize: 17,
+                                color: Colors.red,
+                                fontWeight: FontWeight.bold),
+                            textAlign: TextAlign.center,
                           ),
                         )
                       ],
@@ -79,11 +74,11 @@ class FoodCard extends StatelessWidget {
             Positioned(
                 top: -45,
                 left: 15,
-                child: Container(
+                child: SizedBox(
                   height: 100,
                   width: 100,
                   child: CircleAvatar(
-                    backgroundImage: AssetImage('${imageFood}'),
+                    backgroundImage: AssetImage(imageFood),
                   ),
                 ))
           ],

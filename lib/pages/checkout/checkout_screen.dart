@@ -26,13 +26,13 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         backgroundColor: background,
         elevation: 0.0,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Checkout',
           style: TextStyle(color: Colors.black),
         ),
         leading: IconButton(
           onPressed: () {Navigator.pop(context);},
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios,
             color: Colors.black,
           ),
@@ -47,9 +47,9 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
-                  children: [
+                  children: const [
                     Padding(
-                      padding: const EdgeInsets.only(left: 40),
+                      padding: EdgeInsets.only(left: 40),
                       child: Text(
                         'Delivery',
                         style: TextStyle(
@@ -60,23 +60,23 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                 ),
                 const SizedBox(height: 40),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 45),
+                  padding: const EdgeInsets.symmetric(horizontal: 45),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         'Address details',
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
                       TextButton(
-                        child: Text(
-                          "change",
-                          style: TextStyle(fontSize: 16, color: deepOrange800),
-                        ),
                         onPressed: () {},
                         style: TextButton.styleFrom(
                           foregroundColor: Colors.transparent,
+                        ),
+                        child: Text(
+                          "change",
+                          style: TextStyle(fontSize: 16, color: deepOrange800),
                         ),
                       ),
                     ],
@@ -108,7 +108,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 15,
                                   ),
                                   Container(
@@ -170,9 +170,9 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                     const SizedBox(
                       height: 35,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 40),
-                      child: const Text(
+                    const Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 40),
+                      child: Text(
                         'Delivery method',
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
@@ -192,17 +192,15 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                         child: Column(
                           children: [
                             ListTile(
-                              title: Container(
-                                child: Row(
-                                  children: [
-                                    const Text(
-                                      "Door delivery",
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.w400),
-                                    )
-                                  ],
-                                ),
+                              title: Row(
+                                children: const [
+                                  Text(
+                                    "Door delivery",
+                                    style: TextStyle(
+                                        fontSize: 17,
+                                        fontWeight: FontWeight.w400),
+                                  )
+                                ],
                               ),
                               leading: Radio<RadioButtonProfile>(
                                 value: RadioButtonProfile.cardProfile,
@@ -221,17 +219,15 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                                 indent: 80,
                                 endIndent: 30),
                             ListTile(
-                              title: Container(
-                                child: Row(
-                                  children: [
-                                    const Text(
-                                      "Pick up",
-                                      style: TextStyle(
-                                          fontSize: 17,
-                                          fontWeight: FontWeight.w400),
-                                    )
-                                  ],
-                                ),
+                              title: Row(
+                                children: const [
+                                  Text(
+                                    "Pick up",
+                                    style: TextStyle(
+                                        fontSize: 17,
+                                        fontWeight: FontWeight.w400),
+                                  )
+                                ],
                               ),
                               leading: Radio<RadioButtonProfile>(
                                 value: RadioButtonProfile.paypalProfile,
@@ -253,10 +249,10 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                       height: 65,
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 45),
+                      padding: const EdgeInsets.symmetric(horizontal: 45),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
+                        children: const [
                           Text(
                             'Total',
                             style: TextStyle(
@@ -271,7 +267,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Padding(
@@ -281,7 +277,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) {
-                                return PaymentScreen();
+                                return const PaymentScreen();
                               },
                             ),
                           );
@@ -299,7 +295,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                                 borderRadius: BorderRadius.circular(50.0),
                                 color: deepOrange800,
                               ),
-                              child: Text(
+                              child: const Text(
                                 "Proceed to payment",
                                 style: TextStyle(
                                     fontSize: 17,
