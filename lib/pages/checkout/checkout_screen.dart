@@ -1,3 +1,4 @@
+import 'package:assigment_isi/pages/payment/payment_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/color_schema.dart';
@@ -30,7 +31,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           style: TextStyle(color: Colors.black),
         ),
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {Navigator.pop(context);},
           icon: Icon(
             Icons.arrow_back_ios,
             color: Colors.black,
@@ -40,7 +41,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: ListView(
-          physics: NeverScrollableScrollPhysics(),
+          // physics: NeverScrollableScrollPhysics(),
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -276,7 +277,15 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 40),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return PaymentScreen();
+                              },
+                            ),
+                          );
+                        },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [

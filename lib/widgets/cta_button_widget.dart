@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Ctabutton extends StatelessWidget {
+  final Widget onPressed;
+
   const Ctabutton({
     Key? key,
-    required this.textTitle,
+    required this.textTitle, required this.onPressed,
   }) : super(key: key);
   final String textTitle;
 
@@ -26,7 +28,15 @@ class Ctabutton extends StatelessWidget {
                   padding: const EdgeInsets.all(4),
                   textStyle: const TextStyle(fontSize: 16),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return onPressed;
+                    },
+                  ),
+                );
+                },
                 child: Text(
                   textTitle,
                   style: const TextStyle(

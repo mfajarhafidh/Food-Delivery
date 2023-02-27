@@ -1,3 +1,4 @@
+import 'package:assigment_isi/pages/profile/profile_screen.dart';
 import 'package:assigment_isi/widgets/fonts_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -30,10 +31,12 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 41, top: 60),
+                  padding: const EdgeInsets.only(left: 30, top: 20),
                   child: Row(
                     children: [
-                      SvgPicture.asset('assets/icon/icon_btn_back.svg'),
+                      GestureDetector(
+                        onTap: (){Navigator.pop(context);},
+                        child: SvgPicture.asset('assets/icon/icon_btn_back.svg')),
                       const SizedBox(
                         width: 100,
                       ),
@@ -295,7 +298,7 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 40),
-                      child: const ButtonWidget(textTitle: "Update"),
+                      child: const ButtonWidget(textTitle: "Update", screen: ProfileScreen()),
                     )
                   ],
                 ),

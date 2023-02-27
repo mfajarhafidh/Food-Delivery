@@ -1,4 +1,5 @@
-import 'package:assigment_isi/pages/login/login_screen.dart';
+import 'package:assigment_isi/pages/tab_slides/login/login_screen.dart';
+import 'package:assigment_isi/pages/tab_slides/tab_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../utils/color_schema.dart';
@@ -13,16 +14,13 @@ class SplashScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          const SizedBox(
-            height: 30,
-          ),
+          // const SizedBox(
+          //   height: 30,
+          // ),
           Container(
             alignment: Alignment.topLeft,
             padding: EdgeInsets.only(left: 40),
             child: CircleAvatar(
-              // backgroundImage: AssetImage('assets/image/logormv.png'),
-              // backgroundColor: Colors.white,
-              // radius: 40,
               backgroundColor: Colors.white,
               radius: 40,
               child: CircleAvatar(
@@ -47,9 +45,9 @@ class SplashScreen extends StatelessWidget {
               textAlign: TextAlign.start,
             ),
           ),
-          const SizedBox(
-            height: 30,
-          ),
+          // const SizedBox(
+          //   height: 30,
+          // ),
           Align(
             alignment: Alignment.centerLeft,
             child: SizedBox(
@@ -73,7 +71,7 @@ class SplashScreen extends StatelessWidget {
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) {
-                      return LoginScreen();
+                      return TabSlideScreen();
                     },
                   ),
                 ),

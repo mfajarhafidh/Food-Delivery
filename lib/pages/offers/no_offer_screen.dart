@@ -16,7 +16,9 @@ class NoOfferScreen extends StatelessWidget {
               IconButton(
                   alignment: Alignment.topLeft,
                   padding: EdgeInsets.only(left: 30, top: 40),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   icon: Image.asset('assets/img/btn_back.png')),
               const SizedBox(
                 height: 40,

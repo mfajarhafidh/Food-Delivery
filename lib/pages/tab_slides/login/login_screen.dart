@@ -1,3 +1,5 @@
+import 'package:assigment_isi/pages/bottom_bar/bottom_bar_screen.dart';
+import 'package:assigment_isi/pages/home/home_screen.dart';
 import 'package:assigment_isi/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -69,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        ButtonWidget(textTitle: "Login")
+                        ButtonWidget(textTitle: "Login", screen: BottomBarScreen())
                       ],
                     ),
                   ],

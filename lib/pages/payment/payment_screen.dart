@@ -1,4 +1,6 @@
+import 'package:assigment_isi/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../widgets/confirm_button_widget.dart';
 
@@ -93,7 +95,11 @@ class _PaymentScreenState extends State<PaymentScreen> {
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   color: Color(0xFFF47B0A)),
-                              child: Image.asset('assets/card.png'),
+                              child: SvgPicture.asset(
+                                          'assets/icon/icon_card.svg',
+                                          height: 12,
+                                          width: 16,
+                                          fit: BoxFit.scaleDown),
                             ),
                             const SizedBox(
                               width: 10,
@@ -128,7 +134,11 @@ class _PaymentScreenState extends State<PaymentScreen> {
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   color: Color(0xFFEB4796)),
-                              child: Image.asset('assets/bank.png'),
+                              child: SvgPicture.asset(
+                                          'assets/icon/icon_bank_account.svg',
+                                          height: 12,
+                                          width: 16,
+                                          fit: BoxFit.scaleDown),
                             ),
                             const SizedBox(
                               width: 10,
@@ -242,8 +252,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
                             });
                           }),
                     ),
-                    Divider(
-                        color: Colors.black26, indent: 80, endIndent: 30),
                   ],
                 ),
               ),
@@ -293,7 +301,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
               SizedBox(
                 height: 41,
               ),
-              ActionButtonConfirmWidget(buttonAction: "Payment to proced")
+              ButtonWidget(textTitle: "Proceed to payment", screen: ActionButtonConfirmWidget(buttonAction: "apa ya",),)
             ],
           ),
         ),

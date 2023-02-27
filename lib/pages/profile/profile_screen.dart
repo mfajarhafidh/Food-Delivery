@@ -1,6 +1,11 @@
+import 'package:assigment_isi/pages/bottom_bar/bottom_bar_screen.dart';
+import 'package:assigment_isi/pages/home/home_screen.dart';
+import 'package:assigment_isi/pages/profile/profile_change_screen.dart';
 import 'package:assigment_isi/widgets/button_widget.dart';
 import 'package:assigment_isi/widgets/fonts_widget.dart';
 import 'package:flutter/material.dart';
+
+import '../orders/order_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -10,8 +15,7 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-
-  Widget spacingBoxSized(){
+  Widget spacingBoxSized() {
     return const SizedBox(
       height: 20,
     );
@@ -33,7 +37,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 IconButton(
                     alignment: Alignment.topLeft,
                     padding: const EdgeInsets.only(left: 30, top: 20),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return BottomBarScreen();
+                          },
+                        ),
+                      );
+                    },
                     icon: const Icon(Icons.arrow_back_ios)),
                 const SizedBox(height: 30),
                 const Padding(
@@ -61,7 +73,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             width: 100,
                           ),
                           TextButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) {
+                                      return ProfileChangeScreen();
+                                    },
+                                  ),
+                                );
+                              },
                               child: const Text(
                                 "change",
                                 style: TextStyle(
@@ -73,8 +93,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         height: 175,
                         width: 300,
                         decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20)),
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20)),
                         child: Padding(
                           padding: const EdgeInsets.only(left: 20, top: 20),
                           child: Row(
@@ -82,8 +102,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               Container(
                                 alignment: Alignment.topLeft,
                                 child: Image.asset('assets/img/img_profile.png',
-                                height: 90,
-                                width: 80),
+                                    height: 90, width: 80),
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(left: 10),
@@ -96,9 +115,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       child: const Text(
                                         "Marvis Ighedosa",
                                         style: TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w600
-                                        ),
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w600),
                                         textAlign: TextAlign.center,
                                         overflow: TextOverflow.visible,
                                       ),
@@ -107,16 +125,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       width: 165,
                                       padding: const EdgeInsets.all(5),
                                       decoration: const BoxDecoration(
-                                        border: Border(
-                                          bottom: BorderSide(width: 0.5, color: Colors.black26)
-                                        )
-                                      ),
+                                          border: Border(
+                                              bottom: BorderSide(
+                                                  width: 0.5,
+                                                  color: Colors.black26))),
                                       child: const Text(
                                         "Dosamarvis@gmail.com",
                                         style: TextStyle(
-                                          color: Colors.black26,
-                                          fontSize: 15
-                                        ),
+                                            color: Colors.black26,
+                                            fontSize: 15),
                                         textAlign: TextAlign.start,
                                       ),
                                     ),
@@ -125,17 +142,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                       alignment: Alignment.topLeft,
                                       padding: const EdgeInsets.all(5),
                                       decoration: const BoxDecoration(
-                                        border: Border(
-                                          bottom: BorderSide(width: 0.5, color: Colors.black26)
-                                        )
-                                      ),
+                                          border: Border(
+                                              bottom: BorderSide(
+                                                  width: 0.5,
+                                                  color: Colors.black26))),
                                       child: const Text(
                                         "+234 9011039271",
                                         textAlign: TextAlign.start,
                                         style: TextStyle(
-                                          color: Colors.black26,
-                                          fontSize: 15
-                                        ),
+                                            color: Colors.black26,
+                                            fontSize: 15),
                                       ),
                                     ),
                                     Container(
@@ -147,9 +163,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                         overflow: TextOverflow.visible,
                                         textAlign: TextAlign.start,
                                         style: TextStyle(
-                                          color: Colors.black26,
-                                          fontSize: 15
-                                        ),
+                                            color: Colors.black26,
+                                            fontSize: 15),
                                       ),
                                     ),
                                   ],
@@ -160,29 +175,41 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                       ),
                       spacingBoxSized(),
-                      Container(
-                        height: 50,
-                        width: 300,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20)),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 10),
-                          child: Row(
-                            children: [
-                              const Padding(
-                                padding: EdgeInsets.only(left: 20),
-                                child: SizedBox(
-                                  width: 100,
-                                  child: FontWidget(text: "Orders", sizeFont: 16)
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return OrderScreen();
+                              },
+                            ),
+                          );
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 300,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(20)),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Row(
+                              children: [
+                                const Padding(
+                                  padding: EdgeInsets.only(left: 20),
+                                  child: SizedBox(
+                                      width: 100,
+                                      child: FontWidget(
+                                          text: "Orders", sizeFont: 16)),
                                 ),
-                              ),
-                              const SizedBox(
-                                width: 100,
-                              ),
-                              IconButton(onPressed: (){}, 
-                              icon: const Icon(Icons.arrow_forward_ios))
-                            ],
+                                const SizedBox(
+                                  width: 100,
+                                ),
+                                IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(Icons.arrow_forward_ios))
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -191,8 +218,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         height: 50,
                         width: 300,
                         decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20)),
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20)),
                         child: Padding(
                           padding: const EdgeInsets.only(left: 10),
                           child: Row(
@@ -200,15 +227,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               const Padding(
                                 padding: EdgeInsets.only(left: 20),
                                 child: SizedBox(
-                                  width: 150,
-                                  child: FontWidget(text: "Pending Reviews", sizeFont: 16)
-                                ),
+                                    width: 150,
+                                    child: FontWidget(
+                                        text: "Pending Reviews", sizeFont: 16)),
                               ),
                               const SizedBox(
                                 width: 50,
                               ),
-                              IconButton(onPressed: (){}, 
-                              icon: const Icon(Icons.arrow_forward_ios))
+                              IconButton(
+                                  onPressed: () {},
+                                  icon: const Icon(Icons.arrow_forward_ios))
                             ],
                           ),
                         ),
@@ -218,8 +246,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         height: 50,
                         width: 300,
                         decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20)),
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20)),
                         child: Padding(
                           padding: const EdgeInsets.only(left: 10),
                           child: Row(
@@ -227,15 +255,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               const Padding(
                                 padding: EdgeInsets.only(left: 20),
                                 child: SizedBox(
-                                  width: 100,
-                                  child: FontWidget(text: "Faq", sizeFont: 16)
-                                ),
+                                    width: 100,
+                                    child:
+                                        FontWidget(text: "Faq", sizeFont: 16)),
                               ),
                               const SizedBox(
                                 width: 100,
                               ),
-                              IconButton(onPressed: (){}, 
-                              icon: const Icon(Icons.arrow_forward_ios))
+                              IconButton(
+                                  onPressed: () {},
+                                  icon: const Icon(Icons.arrow_forward_ios))
                             ],
                           ),
                         ),
@@ -245,8 +274,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         height: 50,
                         width: 300,
                         decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(20)),
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(20)),
                         child: Padding(
                           padding: const EdgeInsets.only(left: 10),
                           child: Row(
@@ -254,15 +283,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               const Padding(
                                 padding: EdgeInsets.only(left: 20),
                                 child: SizedBox(
-                                  width: 100,
-                                  child: FontWidget(text: "Help", sizeFont: 16)
-                                ),
+                                    width: 100,
+                                    child:
+                                        FontWidget(text: "Help", sizeFont: 16)),
                               ),
                               const SizedBox(
                                 width: 100,
                               ),
-                              IconButton(onPressed: (){}, 
-                              icon: const Icon(Icons.arrow_forward_ios))
+                              IconButton(
+                                  onPressed: () {},
+                                  icon: const Icon(Icons.arrow_forward_ios))
                             ],
                           ),
                         ),
@@ -270,7 +300,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       const SizedBox(
                         height: 50,
                       ),
-                      const ButtonWidget(textTitle: "Update")
+                      ButtonWidget(
+                        textTitle: "Update",
+                        screen: ProfileScreen(),
+                      )
                     ],
                   ),
                 ),

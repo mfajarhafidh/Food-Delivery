@@ -1,3 +1,4 @@
+import 'package:assigment_isi/pages/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../widgets/button_widget.dart';
@@ -43,7 +44,7 @@ class NoInternetConnectionScreen extends StatelessWidget {
                   const SizedBox(
                     height: 50,
                   ),
-                  const ButtonWidget(textTitle: "Try Again")
+                  const ButtonWidget(textTitle: "Try Again", screen: HomeScreen(),)
                 ],
               )
             ],

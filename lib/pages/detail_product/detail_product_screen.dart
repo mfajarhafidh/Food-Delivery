@@ -1,3 +1,4 @@
+import 'package:assigment_isi/pages/cart/cart_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:assigment_isi/widgets/cta_button_widget.dart';
@@ -38,7 +39,9 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       IconButton(
-                        onPressed: null,
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
                         icon: Icon(
                           Icons.arrow_back_ios_new,
                           size: 20,
@@ -126,7 +129,9 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                       ),
                       Padding(
                         padding: const EdgeInsets.only(bottom: 20),
-                        child: Ctabutton(textTitle: 'Add to cart'),
+                        child: Ctabutton(textTitle: 'Add to cart', 
+                        onPressed: CartScreen(),
+                        ),
                       )
                     ],
                   ),
