@@ -1,5 +1,6 @@
 import 'package:assigment_isi/pages/detail_product/detail_product_screen.dart';
 import 'package:assigment_isi/pages/drawer/shrink_drawer_screen.dart';
+import 'package:assigment_isi/pages/menu_food/food_search_screen.dart';
 import 'package:assigment_isi/pages/profile/profile_change_screen.dart';
 import 'package:assigment_isi/pages/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,6 @@ class MainApp extends StatelessWidget {
         theme: ThemeData(
           fontFamily: 'SF-Pro',
         ),
-        
-        home: DetailProductScreen());
+        home: MenuFoodScreen());
   }
 }
