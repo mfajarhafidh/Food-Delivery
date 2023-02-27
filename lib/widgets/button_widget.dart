@@ -8,13 +8,13 @@ class ButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 300,
-      height: 50,
+      width: 314,
+      height: 70,
       child: TextButton(
         style: TextButton.styleFrom(
           backgroundColor: const Color(0xFFFA4A0C),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(30),
           ),
         ),
         onPressed: () {},
