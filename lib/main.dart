@@ -1,6 +1,7 @@
 import 'package:assigment_isi/pages/drawer/shrink_drawer_screen.dart';
 import 'package:assigment_isi/pages/profile/profile_change_screen.dart';
 import 'package:assigment_isi/pages/profile/profile_screen.dart';
+import 'package:assigment_isi/pages/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,6 +18,6 @@ class MainApp extends StatelessWidget {
         theme: ThemeData(
           fontFamily: 'SF-Pro',
         ),
-        home: MyHomePage(title: "Drawer"));
+        home: SplashScreen());
   }
 }
