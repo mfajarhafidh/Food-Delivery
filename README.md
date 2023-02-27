@@ -1,4 +1,4 @@
-# Food Delivery App UI Kit (Figma Community)
+# Food Delivery App
 
 ## Login Page
 ![image](https://user-images.githubusercontent.com/94110628/220399807-21993fb7-b0b3-44af-96e6-32b6e56c1dc0.png)
