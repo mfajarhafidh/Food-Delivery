@@ -15,13 +15,12 @@ class ItemNotFoundScreen extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Container(
-                      child: IconButton(
-                          onPressed: () {},
-                          icon: Image.asset('assets/img/btn_back.png'))),
+                  IconButton(
+                      onPressed: () {},
+                      icon: Image.asset('assets/img/btn_back.png')),
                   Padding(
                     padding: const EdgeInsets.only(left: 20),
-                    child: Container(
+                    child: SizedBox(
                       height: 30,
                       width: 300,
                       child: TextFormField(

@@ -50,8 +50,8 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              const Text(
+            children: const [
+              Text(
                 'Center',
               ),
             ],
@@ -129,14 +129,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 ListTile(
                   onTap: () {},
                   title: Row(
-                    children: [
-                      const Text("Sign-out",
+                    children: const [
+                      Text("Sign-out",
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.w600)),
-                      const SizedBox(
+                      SizedBox(
                         width: 10,
                       ),
-                      const Icon(Icons.arrow_forward,
+                      Icon(Icons.arrow_forward,
                           size: 20.0, color: Colors.white)
                     ],
                   ),

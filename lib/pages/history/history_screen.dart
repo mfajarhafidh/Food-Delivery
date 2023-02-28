@@ -1,6 +1,8 @@
 import 'package:assigment_isi/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 
+import '../home/home_screen.dart';
+
 class HistoryScreen extends StatelessWidget {
   const HistoryScreen({super.key});
 
@@ -16,14 +18,13 @@ class HistoryScreen extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Container(
-                      child: IconButton(
-                          onPressed: () {},
-                          icon: Image.asset('assets/img/btn_back.png'))),
-                  Container(
+                  IconButton(
+                      onPressed: () {Navigator.pop(context);},
+                      icon: Image.asset('assets/img/btn_back.png')),
+                  const SizedBox(
                     height: 30,
                     width: 300,
-                    child: const Text(
+                    child: Text(
                         textAlign: TextAlign.center,
                         "History",
                         style: TextStyle(
@@ -56,7 +57,7 @@ class HistoryScreen extends StatelessWidget {
                   const SizedBox(
                     height: 200,
                   ),
-                  const ButtonWidget(textTitle: "Start Ordering")
+                  const ButtonWidget(textTitle: "Start Ordering", screen: HomeScreen(),)
                 ],
               )
             ],

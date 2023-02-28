@@ -10,7 +10,8 @@ class MenuFoodScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         leading: GestureDetector(
-          child: Icon( Icons.arrow_back_ios, color: Colors.black,  ),
+          onTap: (){Navigator.pop(context);},
+          child: const Icon( Icons.arrow_back_ios, color: Colors.black,  ),
         ),
         backgroundColor: Colors.white,
         title: Container(
@@ -48,7 +49,7 @@ class MenuFoodScreen extends StatelessWidget {
                 shrinkWrap: true,
                   crossAxisCount: 2,
                   mainAxisSpacing: 50,
-                children: [
+                children: const [
                   FoodCard(
                     title: "Veggoe\nTomatto Mix",
                     imageFood: 'assets/img/ic_food.png',

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../pages/login/login_screen.dart';
-import '../pages/sign_up/signup_screen.dart';
+import '../../utils/color_schema.dart';
+import 'login/login_screen.dart';
+import 'sign_up/signup_screen.dart';
 
-class TabSlide extends StatelessWidget {
-  const TabSlide({super.key});
+class TabSlideScreen extends StatelessWidget {
+  const TabSlideScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,12 +14,12 @@ class TabSlide extends StatelessWidget {
         ListView(children: <Widget>[
           Container(
             height: 200,
-            color: const Color.fromARGB(255, 255, 255, 255),
+            color: Colors.white,
             child: Image.asset('assets/img/login_page.png',
                 height: 162.38, width: 131.53),
           ),
           Container(
-            color: const Color.fromARGB(239, 209, 209, 209),
+            color: background,
             child: DefaultTabController(
                 length: 2,
                 initialIndex: 0,
@@ -27,20 +28,20 @@ class TabSlide extends StatelessWidget {
                     children: <Widget>[
                       Container(
                         decoration: const BoxDecoration(
-                            color: Color.fromARGB(255, 255, 255, 255),
+                            color: Colors.white,
                             borderRadius: BorderRadius.only(
                               bottomLeft: Radius.circular(30),
                               bottomRight: Radius.circular(30),
                             )),
-                        child: const TabBar(
-                          labelStyle: TextStyle(
+                        child: TabBar(
+                          labelStyle: const TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 18),
-                          indicatorColor: Color.fromARGB(255, 250, 74, 12),
+                          indicatorColor: deepOrange800,
                           indicatorPadding:
-                              EdgeInsets.symmetric(horizontal: 50),
+                              const EdgeInsets.symmetric(horizontal: 50),
                           labelColor: Colors.black,
                           unselectedLabelColor: Colors.black,
-                          tabs: [
+                          tabs: const [
                             Tab(text: 'Login'),
                             Tab(text: 'Sign-up'),
                           ],
