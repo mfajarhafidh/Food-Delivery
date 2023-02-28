@@ -11,9 +11,6 @@ class DetailProductScreen extends StatefulWidget {
 
 class _DetailProductScreenState extends State<DetailProductScreen> {
   Color _iconColor = Colors.black26;
-  // int position = 1;
-
-  // void pressedFavorite() {}
 
   @override
   Widget build(BuildContext context) {

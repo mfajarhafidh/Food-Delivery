@@ -23,7 +23,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: const Color(0xffEDEDED),
+        backgroundColor: const Color(0xFFF5F5F8),
         appBar: AppBar(
           elevation: 0,
           leading: IconButton(
@@ -48,7 +48,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
             ),
           ]),
           centerTitle: true,
-          backgroundColor: const Color(0xffEDEDED),
+          backgroundColor: const Color(0xFFF5F5F8),
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 24),
@@ -257,7 +257,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    color: const Color(0xffEDEDED),
+                    color: const Color(0xFFF5F5F8),
                   ),
                   child: Row(
                     children: const [
@@ -288,7 +288,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
               const SizedBox(
                 height: 41,
               ),
-              // const ButtonWidget(textTitle: "Proceed to payment", screen: ActionButtonConfirmWidget(buttonAction: "Dialog",),)
               ActionButtonConfirmWidget(buttonAction: "Proceed to payment")
             ],
           ),

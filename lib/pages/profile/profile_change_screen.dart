@@ -179,7 +179,7 @@ class _ProfileChangeScreenState extends State<ProfileChangeScreen> {
                                 activeColor: const Color(0xFFFA4A0C),
                                 onChanged: (RadioButtonProfile? value) {
                                   setState(() {
-                                    // _character = value;
+                                    _character = value;
                                   });
                                 },
                               ),

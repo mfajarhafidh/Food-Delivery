@@ -4,6 +4,7 @@ import 'package:assigment_isi/widgets/button_widget.dart';
 import 'package:assigment_isi/widgets/fonts_widget.dart';
 import 'package:flutter/material.dart';
 
+import '../home/home_screen.dart';
 import '../orders/order_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -301,7 +302,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                       const ButtonWidget(
                         textTitle: "Update",
-                        screen: BottomBarScreen(),
+                        screen: HomeScreen(),
                       )
                     ],
                   ),

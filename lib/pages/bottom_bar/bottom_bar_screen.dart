@@ -15,10 +15,13 @@ class BottomBarScreen extends StatefulWidget {
 class _BottomBarScreenState extends State<BottomBarScreen> {
   int _selectedIndex = 0;
   static final List<Widget> _widgetOptions = <Widget>[
-    const HomeScreen(),
+    // const HomeScreen(),
+    Text("Halo dek"),
+    Text("Halo dek"),
+    Text("Halo dek"),
     const Text("Halo dek"),
-    const ProfileScreen(),
-    const HistoryScreen()
+    // const ProfileScreen(),
+    // const HistoryScreen()
   ];
 
   void _onItemTapped(int index){
