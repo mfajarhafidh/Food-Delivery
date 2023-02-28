@@ -21,6 +21,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: const Color(0xffEDEDED),
         appBar: AppBar(
@@ -157,8 +158,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
                             });
                           }),
                     ),
-                    const Divider(
-                        color: Colors.black26, indent: 80, endIndent: 30),
                   ],
                 ),
               ),
@@ -182,13 +181,13 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   borderRadius: BorderRadius.circular(30),
                 ),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ListTile(
                       title: Row(
                         children: [
                           Container(
                             height: 40,
-
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 ),
@@ -289,7 +288,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
               const SizedBox(
                 height: 41,
               ),
-              const ButtonWidget(textTitle: "Proceed to payment", screen: ActionButtonConfirmWidget(buttonAction: "apa ya",),)
+              // const ButtonWidget(textTitle: "Proceed to payment", screen: ActionButtonConfirmWidget(buttonAction: "Dialog",),)
+              ActionButtonConfirmWidget(buttonAction: "Proceed to payment")
             ],
           ),
         ),

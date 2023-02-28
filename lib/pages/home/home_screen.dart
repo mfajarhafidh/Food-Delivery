@@ -1,5 +1,5 @@
 import 'package:assigment_isi/pages/cart/cart_screen.dart';
-import 'package:assigment_isi/pages/menu_food/food_search_screen.dart';
+import 'package:assigment_isi/pages/search_menu/food_search_screen.dart';
 import 'package:assigment_isi/pages/offers/no_offer_screen.dart';
 import 'package:assigment_isi/pages/orders/order_screen.dart';
 import 'package:assigment_isi/pages/profile/profile_screen.dart';

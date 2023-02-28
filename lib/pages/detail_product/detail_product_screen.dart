@@ -1,7 +1,6 @@
 import 'package:assigment_isi/pages/cart/cart_screen.dart';
+import 'package:assigment_isi/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
-
-import 'package:assigment_isi/widgets/cta_button_widget.dart';
 
 class DetailProductScreen extends StatefulWidget {
   const DetailProductScreen({super.key});
@@ -11,10 +10,10 @@ class DetailProductScreen extends StatefulWidget {
 }
 
 class _DetailProductScreenState extends State<DetailProductScreen> {
-  Color _iconColor = Colors.redAccent;
-  int position = 1;
+  Color _iconColor = Colors.black26;
+  // int position = 1;
 
-  void pressedFavorite() {}
+  // void pressedFavorite() {}
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +49,11 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                                 ),
                                 onPressed: () {
                                   setState(() {
-                                    _iconColor = Colors.redAccent;
+                                    if(_iconColor == Colors.black26){
+                                      _iconColor = Colors.redAccent;
+                                    }else{
+                                      _iconColor = Colors.black26;
+                                    }                                    
                                   });
                                 })),
                       ),
@@ -115,10 +118,8 @@ class _DetailProductScreenState extends State<DetailProductScreen> {
                       const Text(
                           'All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately.'),
                       const Padding(
-                        padding: EdgeInsets.only(bottom: 20),
-                        child: Ctabutton(textTitle: 'Add to cart', 
-                        onPressed: CartScreen(),
-                        ),
+                        padding: EdgeInsets.only(bottom: 20, top: 50),
+                        child: ButtonWidget(textTitle: "Add to cart", screen: CartScreen()),
                       )
                     ],
                   ),

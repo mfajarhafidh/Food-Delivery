@@ -22,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 535,
               width: double.infinity,
               child: Padding(
-                padding: const EdgeInsets.all(50),
+                padding: const EdgeInsets.only(left: 46, right: 46, top: 50, bottom: 41),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -58,14 +58,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     TextButton(
                       onPressed: () => {},
                       style: TextButton.styleFrom(
-                        foregroundColor: const Color.fromARGB(255, 250, 74, 12),
+                        foregroundColor: const Color(0xFFFA4A0C),
                       ),
                       child: const Text("Forgot passcode?",
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 17)),
                     ),
                     const SizedBox(
-                      height: 50,
+                      height: 136,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,

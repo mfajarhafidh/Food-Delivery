@@ -8,7 +8,7 @@ class ButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 310,
+      width: 314,
       height: 70,
       child: TextButton(
         style: TextButton.styleFrom(
@@ -26,7 +26,7 @@ class ButtonWidget extends StatelessWidget {
                 ),
         child: Text(
           textTitle,
-          style: const TextStyle(color: Color(0xffffffff), fontSize: 17),
+          style: const TextStyle(color: Color(0xffffffff), fontSize: 20, fontFamily: 'SF-Pro'),
         ),
       ),
     );

@@ -10,6 +10,7 @@ class MenuFoodScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         leading: GestureDetector(
+          onTap: (){Navigator.pop(context);},
           child: const Icon( Icons.arrow_back_ios, color: Colors.black,  ),
         ),
         backgroundColor: Colors.white,

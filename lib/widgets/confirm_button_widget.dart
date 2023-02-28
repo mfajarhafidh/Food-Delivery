@@ -8,15 +8,16 @@ class ActionButtonConfirmWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 5),
+      padding: EdgeInsets.symmetric(vertical: 5),
       width: double.infinity,
       child: ElevatedButton(
         onPressed: () {
+          print("Confirm proses");
           showDialog(
             context: context,
             builder: (context) {
               return AlertDialog(
-                title: const Padding(
+                title: Padding(
                   padding: EdgeInsets.symmetric(vertical: 5, horizontal: 15),
                   child: Text(
                     "Please Note",
@@ -24,62 +25,77 @@ class ActionButtonConfirmWidget extends StatelessWidget {
                   ),
                 ),
                 content: Container(
-                  margin: const EdgeInsets.only(top: 20),
+                  margin: EdgeInsets.only(top: 20),
                   height: 322,
                   width: 315,
                   decoration: BoxDecoration(
-                    color: const Color(0xffFFFFFF),
+                    color: Color(0xffFFFFFF),
                     borderRadius: BorderRadius.circular(80),
                   ),
                   child: Column(
                     children: [
                       ListTile(
-                        title: Wrap(
-                          children: const [
-                            Text(
-                              'DELIVERY TO MAINLAND ',
-                              style: TextStyle(color: Colors.grey),
-                            ),
-                            SizedBox(
-                              height: 30,
-                            ),
-                            Text("N1000 - N2000"),
-                          ],
+                        title: Container(
+                          child: Wrap(
+                            children: [
+                              Container(
+                                child: Text(
+                                  'DELIVERY TO MAINLAND ',
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 30,
+                              ),
+                              Container(
+                                child: Text("N1000 - N2000"),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                      const Divider(color: Colors.black26, indent: 15, endIndent: 20),
+                      Divider(color: Colors.black26, indent: 15, endIndent: 20),
                       ListTile(
-                        title: Wrap(
-                          children: const [
-                            Text(
-                              'DELIVERY TO ISLAND ',
-                              style: TextStyle(color: Colors.grey),
-                            ),
-                            SizedBox(
-                              height: 30,
-                            ),
-                            Text("N2000 - N3000"),
-                          ],
+                        title: Container(
+                          child: Wrap(
+                            children: [
+                              Container(
+                                child: Text(
+                                  'DELIVERY TO ISLAND ',
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 30,
+                              ),
+                              Container(
+                                child: Text("N2000 - N3000"),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],
                   ),
                 ),
                 actions: [
-                  TextButton(
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
-                    style: TextButton.styleFrom(
-                      backgroundColor: const Color(0xffffffff),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
+                  Container(
+                    child: TextButton(
+                      onPressed: () {
+                        print("Confrim cancel press");
+                        Navigator.of(context).pop();
+                      },
+                      style: TextButton.styleFrom(
+                        backgroundColor: Color(0xffffffff),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        minimumSize: Size(100.0, 60.0),
                       ),
-                      minimumSize: const Size(100.0, 60.0),
-                    ),
-                    child: const Text(
-                      "Cancel",
-                      style: TextStyle(color: Colors.grey),
+                      child: Text(
+                        "Cancel",
+                        style: TextStyle(color: Colors.grey),
+                      ),
                     ),
                   ),
                   SizedBox(
@@ -87,6 +103,7 @@ class ActionButtonConfirmWidget extends StatelessWidget {
                     height: 60,
                     child: ElevatedButton(
                       onPressed: () {
+                        print("Confrim proced pres");
                         Navigator.of(context).pop();
                       },
                       style: ElevatedButton.styleFrom(
@@ -95,7 +112,7 @@ class ActionButtonConfirmWidget extends StatelessWidget {
                           borderRadius: BorderRadius.circular(30),
                         ),
                       ),
-                      child: const Text(
+                      child: Text(
                         "Proceed",
                       ),
                     ),
@@ -110,12 +127,13 @@ class ActionButtonConfirmWidget extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30.0),
           ),
-          minimumSize: const Size(314.0, 70.0),
+          minimumSize: Size(314.0, 70.0),
         ),
         child: Text(
           buttonAction,
-          style: const TextStyle(
+          style: TextStyle(
             color: Colors.white,
+            fontSize: 20, fontFamily: 'SF-Pro'
           ),
         ),
       ),

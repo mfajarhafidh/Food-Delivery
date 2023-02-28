@@ -301,7 +301,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                       const ButtonWidget(
                         textTitle: "Update",
-                        screen: ProfileScreen(),
+                        screen: BottomBarScreen(),
                       )
                     ],
                   ),
