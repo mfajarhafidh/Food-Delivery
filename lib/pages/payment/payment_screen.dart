@@ -1,4 +1,3 @@
-import 'package:assigment_isi/widgets/button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -288,7 +287,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
               const SizedBox(
                 height: 41,
               ),
-              ActionButtonConfirmWidget(buttonAction: "Proceed to payment")
+              const ActionButtonConfirmWidget(buttonAction: "Proceed to payment")
             ],
           ),
         ),

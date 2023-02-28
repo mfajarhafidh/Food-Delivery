@@ -1,4 +1,3 @@
-import 'package:assigment_isi/pages/bottom_bar/bottom_bar_screen.dart';
 import 'package:assigment_isi/pages/profile/profile_change_screen.dart';
 import 'package:assigment_isi/widgets/button_widget.dart';
 import 'package:assigment_isi/widgets/fonts_widget.dart';
@@ -41,7 +40,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (context) {
-                            return const BottomBarScreen();
+                            return const HomeScreen();
                           },
                         ),
                       );

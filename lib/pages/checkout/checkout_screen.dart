@@ -41,7 +41,6 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       body: Padding(
         padding: const EdgeInsets.all(10),
         child: ListView(
-          // physics: NeverScrollableScrollPhysics(),
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,

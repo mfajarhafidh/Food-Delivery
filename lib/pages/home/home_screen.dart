@@ -52,16 +52,13 @@ class _HomeScreenState extends State<HomeScreen> {
           elevation: 0.0,
           backgroundColor: background,
           centerTitle: true,
-          leading: Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: IconButton(
-              onPressed: () {
-                toggleMenu();
-              },
-              icon: const Icon(
-                Icons.menu,
-                color: Colors.black,
-              ),
+          leading: IconButton(
+            onPressed: () {
+              toggleMenu();
+            },
+            icon: const Icon(
+              Icons.menu,
+              color: Colors.black,
             ),
           ),
           actions: [
@@ -99,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               const SizedBox(
-                height: 20.0,
+                height: 28.0,
               ),
               //To add some elevation & border radius to text field need to wrap in Material
               GestureDetector(
@@ -117,13 +114,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: 314,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      color: Color(0xFFEFEEEE)),
+                      color: const Color(0xFFEFEEEE)),
                   child: Row(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
+                      const Padding(
+                        padding: EdgeInsets.only(
                             left: 35, top: 21, bottom: 21),
-                        child: Container(
+                        child: SizedBox(
                           height: 18,
                           width: 18,
                           child: Icon(
@@ -137,7 +134,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: const EdgeInsets.symmetric(vertical: 20),
                         child: Container(
                           padding: const EdgeInsets.only(left: 16),
-                          child: Text(
+                          child: const Text(
                             "Search",
                             style: TextStyle(
                                 fontSize: 17,
@@ -166,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             const EdgeInsets.symmetric(horizontal: 8.0),
                         tabs: const [
                           Tab(
-                            text: "Food",
+                            text: "Foods",
                           ),
                           Tab(
                             text: "Drinks",
@@ -206,25 +203,25 @@ class _HomeScreenState extends State<HomeScreen> {
                           children: const [
                             FoodCardWidget(
                                 image: "assets/img/food1.png",
-                                text: "Vegie tomato mix"),
+                                text: "Veggie\ntomato mix"),
                             SizedBox(
                               width: 20,
                             ),
                             FoodCardWidget(
                                 image: "assets/img/food1.png",
-                                text: "Vegie tomato mix"),
+                                text: "Veggie\ntomato mix"),
                             SizedBox(
                               width: 20,
                             ),
                             FoodCardWidget(
                                 image: "assets/img/food1.png",
-                                text: "Vegie tomato mix"),
+                                text: "Veggie\ntomato mix"),
                             SizedBox(
                               width: 20,
                             ),
                             FoodCardWidget(
                                 image: "assets/img/food1.png",
-                                text: "Vegie tomato mix"),
+                                text: "Veggie\ntomato mix"),
                           ],
                         ),
                         ListView(
@@ -313,7 +310,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 );
                     }, 
-                  icon: Icon(Icons.home)),
+                  icon: const Icon(Icons.home)),
               ),
               BottomNavigationBarItem(
                 label: "Favorite",
@@ -325,7 +322,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                   ),
                 );}, 
-                  icon: Icon(Icons.favorite)),
+                  icon: const Icon(Icons.favorite)),
               ),
               BottomNavigationBarItem(
                 label: "Profile",
@@ -337,7 +334,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                   ),
                 );}, 
-                  icon: Icon(Icons.person)),
+                  icon: const Icon(Icons.person)),
               ),
               BottomNavigationBarItem(
                 label: "History",
@@ -349,7 +346,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                   ),
                 );}, 
-                  icon: Icon(Icons.history)),
+                  icon: const Icon(Icons.history)),
               ),
             ]),
       ),
